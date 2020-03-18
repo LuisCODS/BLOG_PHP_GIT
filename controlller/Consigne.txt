@@ -1,0 +1,2 @@
+Objetido desse modulo é de tratar as requisicoes vinda da view e interagir com o Model e o DAO 
+para pegar as informacoes do banco de dados.

@@ -1,0 +1,1 @@
+Objetido desse modulo é de popular as variaveis das entidades.
