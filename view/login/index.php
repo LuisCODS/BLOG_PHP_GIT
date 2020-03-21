@@ -21,8 +21,6 @@
                         Login
                 </button> 
               </form> 
-            
-            <p id="demo"></p>
         </div> 
         <script src="../../plugins/jquery-3.4.1.min.js/"></script>
         <script src="../../plugins/popper.min.js"></script>
