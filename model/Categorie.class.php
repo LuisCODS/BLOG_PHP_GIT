@@ -1,28 +1,28 @@
 <?php
 
-	Class Categorie() 
+	Class Categorie
 	{
 
-		private $CategorieID;
+		private $Categorie_ID;
 		private $NomCategorie;
 
-		function __Construct($CategorieID,$NomCategorie)
+		function __Construct($Categorie_ID,$NomCategorie)
 		{
-			$this->$CategorieID = $CategorieID;
-			$this->$NomCategorie   = $NomCategorie;
+			$this->Categorie_ID = $Categorie_ID;
+			$this->NomCategorie   = $NomCategorie;
 		}
 
 		function getCategorieID(){
-			return $this->$CategorieID;
+			return $this->Categorie_ID;
 		}
-		function setCategorieID($CategorieID){
-			 $this->$CategorieID = $CategorieID;
+		function setCategorieID($Categorie_ID){
+			 $this->Categorie_ID = $Categorie_ID;
 		}
 		function getNomCategorie(){
-			return $this->$NomCategorie;
+			return $this->NomCategorie;
 		}
 		function setNomCategorie($NomCategorie){
-			 $this->$NomCategorie = $NomCategorie;
+			 $this->NomCategorie = $NomCategorie;
 		}
 
 

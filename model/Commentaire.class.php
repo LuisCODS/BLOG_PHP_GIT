@@ -1,44 +1,44 @@
 <?php
 
-	Class Commentaire() 
+	Class Commentaire
 	{
 
-		private $PK_CommentaireID;
-		private $FK_PostID;
+		private $Commentaire_ID;
+		private $Post_ID;
 		private $Commentaire;
 		private $DateDebut;
 
-		function __Construct($PK_CommentaireID,$FK_PostID,$Commentaire,$DateDebut)
+		function __Construct($Commentaire_ID,$Post_ID,$Commentaire,$DateDebut)
 		{
-			$this->$PK_CommentaireID  = $PK_CommentaireID;
-			$this->$FK_PostID   	  = $FK_PostID;
-			$this->$Commentaire	      = $Commentaire;
-			$this->$DateDebut  		  = $DateDebut;
+			$this->Commentaire_ID  = $Commentaire_ID;
+			$this->Post_ID         = $Post_ID;
+			$this->Commentaire	    = $Commentaire;
+			$this->DateDebut  	    = $DateDebut;
 		}
 
-		function getPK_CommentaireID(){
-			return $this->$PK_CommentaireID;
+		function getCommentaireID(){
+			return $this->Commentaire_ID;
 		}
-		function setPK_CommentaireID($PK_CommentaireID){
-			 $this->$PK_CommentaireID = $PK_CommentaireID;
+		function setCommentaireID($Commentaire_ID){
+			 $this->Commentaire_ID = $Commentaire_ID;
 		}
 		function getPostID(){
-			return $this->$FK_PostID;
+			return $this->Post_ID;
 		}
-		function setPostID($FK_PostID){
-			 $this->$FK_PostID = $FK_PostID;
+		function setPostID($Post_ID){
+			 $this->Post_ID = $Post_ID;
 		}
 		function getCommentaire(){
-			return $this->$Commentaire;
+			return $this->Commentaire;
 		}
 		function setCommentaire($Commentaire){
-			 $this->$Commentaire = $Commentaire;
+			 $this->Commentaire = $Commentaire;
 		}
 		function getDateDebut(){
-			return $this->$DateDebut;
+			return $this->DateDebut;
 		}
 		function setDateDebut($DateDebut){
-			 $this->$DateDebut = $DateDebut;
+			 $this->DateDebut = $DateDebut;
 		}
 
 

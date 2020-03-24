@@ -1,68 +1,68 @@
 <?php
 
-	Class Post() 
+	Class Post 
 	{
 
-		private $PK_PostID;
-		private $FK_CategorieID;
+		private $Post_ID;
+		private $Categorie_ID;
 		private $Title;
 		private $Resume;
 		private $Contenu;
 		private $DateDebut;
 		private $DateFin;
 
-		function __Construct($PK_PostID,$FK_CategorieID,$Title,$Resume,$Contenu,$DateDebut,$DateFin)
+		function __Construct($Post_ID,$Categorie_ID,$Title,$Resume,$Contenu,$DateDebut,$DateFin)
 		{
-			$this->$PK_PostID 		= $PK_PostID;
-			$this->$FK_CategorieID  = $FK_CategorieID;
-			$this->$Title 	    	= $Title;
-			$this->$Resume 	   	    = $Resume;
-			$this->$Contenu 	   	= $Contenu;
-			$this->$DateDebut 	  	= $DateDebut;
-			$this->$DateFin	  	    = $DateFin;
+			$this->Post_ID 			= $Post_ID;
+			$this->Categorie_ID  	= $Categorie_ID;
+			$this->Title 	    	= $Title;
+			$this->Resume 	   	    = $Resume;
+			$this->Contenu 	 	  	= $Contenu;
+			$this->DateDebut 	  	= $DateDebut;
+			$this->DateFin	  	    = $DateFin;
 		}
 
 		function getPostID(){
-			return $this->$PK_PostID;
+			return $this->Post_ID;
 		}
-		function setPostID($PK_PostID){
-			 $this->$PK_PostID = $PK_PostID;
+		function setPostID($Post_ID){
+			 $this->Post_ID = $Post_ID;
 		}
 		function getCategorieID(){
-			return $this->$FK_CategorieID;
+			return $this->Categorie_ID;
 		}
-		function setCategorieID($FK_CategorieID){
-			 $this->$FK_CategorieID = $FK_CategorieID;
+		function setCategorieID($Categorie_ID){
+			 $this->Categorie_ID = $Categorie_ID;
 		}
 		function getTitle(){
-			return $this->$Title;
+			return $this->Title;
 		}
 		function setTitle($Title){
-			 $this->$Title = $Title;
+			 $this->Title = $Title;
 		}
 		function getResume(){
-			return $this->$Resume;
+			return $this->Resume;
 		}
 		function setResume($Resume){
-			 $this->$Resume = $Resume;
+			 $this->Resume = $Resume;
 		}
 		function getContenu(){
-			return $this->$Contenu;
+			return $this->Contenu;
 		}
 		function setContenu($Contenu){
-			 $this->$Contenu = $Contenu;
+			 $this->Contenu = $Contenu;
 		}
 		function getDateDebut(){
-			return $this->$DateDebut;
+			return $this->DateDebut;
 		}
 		function setDateDebut($DateDebut){
-			 $this->$DateDebut = $DateDebut;
+			 $this->DateDebut = $DateDebut;
 		}
 		function getDateFin(){
-			return $this->$DateFin;
+			return $this->DateFin;
 		}
 		function setDateFin($DateFin){
-			 $this->$ = $DateFin;
+			 $this->DateFin = $DateFin;
 		}
 	}
 

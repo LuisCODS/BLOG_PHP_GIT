@@ -1,36 +1,29 @@
 <?php
 
-	Class Profil() 
+Class Profil
+{
+
+	private $Profil_ID;
+	private $ProfilNom;
+
+	function __Construct($Profil_ID, $ProfilNom)
 	{
-
-		private $PK_ProfilID;
-		private $ProfilNom;
-
-		function __Construct($PK_ProfilID,$ProfilNom)
-		{
-			$this->$PK_ProfilID = $PK_ProfilID;
-			$this->$ProfilNom 	= $ProfilNom;
-		}
-
-		function getProfilID(){
-			return $this->$PK_ProfilID;
-		}
-		function setProfilID($PK_ProfilID){
-			 $this->$PK_ProfilID = $PK_ProfilID;
-		}
-		function getProfilNom(){
-			return $this->$ProfilNom;
-		}
-		function setProfilNom($ProfilNom){
-			 $this->$ProfilNom = $ProfilNom;
-		}
-
-
-
-
-
-
-
+		$this->Profil_ID   = $Profil_ID;
+		$this->ProfilNom   = $ProfilNom;
 	}
 
+	function getProfilID(){
+		return $this->Profil_ID;
+	}
+	function setProfilID($Profil_ID){
+		 $this->Profil_ID = $Profil_ID;
+	}
+	function getProfilNom(){
+		return $this->ProfilNom;
+	}
+	function setProfilNom($ProfilNom){
+		 $this->ProfilNom = $ProfilNom;
+	}
+
+}
 ?>
