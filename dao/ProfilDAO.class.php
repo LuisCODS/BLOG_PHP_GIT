@@ -28,10 +28,14 @@ include'../includes/Connection.class.php';
 
 		function upDate(Profil $p){
 			try {
+
+					$profilNom = $p->getProfilNom();
+					$ProfilID = $p->getProfilID();
 					$sql = 'update profil set ProfilNom = ? where Profil_ID = ? ';
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $p->getProfilNom() );
-					$stmt->bindParam(2, $p->getProfilID() );
+					$stmt->bindParam(1, $profilNom );
+					$stmt->bindParam(2, $ProfilID);
+					
 					return $stmt->execute();					
 			} catch (PDOException $e) {
 				echo "Erro: ". $e;
