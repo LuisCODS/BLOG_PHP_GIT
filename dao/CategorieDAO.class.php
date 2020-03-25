@@ -6,18 +6,18 @@
 		private $;
 		private $;
 
-		function __Construct($,$)
-		{
-			$this->$   = $;
+		// function __Construct($,$)
+		// {
+		// 	$this->   = $;
 
-		}
+		// }
 
-		function get(){
-			return $this->$;
-		}
-		function set($){
-			 $this->$ = $;
-		}
+		// function get(){
+		// 	return $this->;
+		// }
+		// function set($){
+		// 	 $this-> = $;
+		// }
 
 	}
 

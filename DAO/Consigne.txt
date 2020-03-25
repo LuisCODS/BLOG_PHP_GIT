@@ -1,2 +1,2 @@
-Objetido desse modulo é de fazer os scripts para acessar o banco de dados.
+Objetivo desse modulo é de fazer os scripts para acessar o banco de dados.
 O DAO faz acesso aos dados das entidades: para cada classe havera um DAO.

@@ -20,17 +20,6 @@
 	}//FIN CLASS
 
 
-		//to test connection erro
-		// $pdo = new Connection();
-		// $cn = $pdo->getConnection();
 
-		// $stmt = $cn->prepare('select * from utilisateur');
-		// $stmt->execute();
-
-		// $rs = $stmt->fetchall(PDO::FETCH_ASSOC);
-
-		// foreach ($rs as $row){
-		// 	echo $row["UtilisateurNickName"];
-		// }
 
 ?>

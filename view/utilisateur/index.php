@@ -1,10 +1,6 @@
 <!--  HEAD  -->  
 <?php include '../../includes/head.php'; ?> 
 
-
-
-
-
 <!-- _________________ RENDER PAGE - UTILISATEUR ICI _________________-->
 
 <div class="container-fluid">
@@ -48,10 +44,6 @@
     </div>
 </div> 
 <!-- __________________________ FIN RENDER PAGE ________________________-->
-
-
-
-
 
 
 <!--  MODAL: POUR LE BUTTON -->
