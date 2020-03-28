@@ -10,7 +10,8 @@
 		private $UtilisateurMDP;
 		private $UtilisateurEmail;
 
-		function __Construct($Utilisateur_ID,$Profil_ID,$UtilisateurName,$UtilisateurNickName,$UtilisateurMDP,$UtilisateurEmail)
+		function __Construct($Utilisateur_ID,$Profil_ID,$UtilisateurName,
+							$UtilisateurNickName,$UtilisateurMDP,$UtilisateurEmail)
 		{
 			$this->Utilisateur_ID 	     = $Utilisateur_ID;
 			$this->Profil_ID 	     	 = $Profil_ID;
@@ -23,14 +24,20 @@
 		function getUtilisateurID(){
 			return $this->Utilisateur_ID;
 		}
-		function setUtilisateurID($Utilisateur_ID){
-			 $this->Utilisateur_ID = $Utilisateur_ID;
-		}
+		// function setUtilisateurID($Utilisateur_ID){
+		// 	 $this->Utilisateur_ID = $Utilisateur_ID;
+		// }
 		function getProfilID(){
 			return $this->Profil_ID;
 		}
 		function stProfilID($Profil_ID){
 			 $this->Profil_ID = $Profil_ID;
+		}
+		function getUtilisateurName(){
+			return $this->UtilisateurName;
+		}
+		function setUtilisateurName($UtilisateurName){
+			 $this->UtilisateurName = $UtilisateurName;
 		}
 		function getUtilisateurNickName(){
 			return $this->UtilisateurNickName;

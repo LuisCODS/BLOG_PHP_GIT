@@ -16,7 +16,7 @@
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-success"><i class="far fa-save"></i> Ajouter</button>
+            <button type="button" id="btnAjouter" class="btn btn-success"><i class="far fa-save"></i> Ajouter</button>
         </div>
     </div>
   </div>

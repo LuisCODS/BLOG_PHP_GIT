@@ -15,9 +15,9 @@
 		function getCategorieID(){
 			return $this->Categorie_ID;
 		}
-		function setCategorieID($Categorie_ID){
-			 $this->Categorie_ID = $Categorie_ID;
-		}
+		// function setCategorieID($Categorie_ID){
+		// 	 $this->Categorie_ID = $Categorie_ID;
+		// }
 		function getNomCategorie(){
 			return $this->NomCategorie;
 		}

@@ -1,6 +1,6 @@
 <?php
 
-	Class Commentaire
+	Class 
 	{
 
 		private $Commentaire_ID;
@@ -19,9 +19,9 @@
 		function getCommentaireID(){
 			return $this->Commentaire_ID;
 		}
-		function setCommentaireID($Commentaire_ID){
-			 $this->Commentaire_ID = $Commentaire_ID;
-		}
+		// function setCommentaireID($Commentaire_ID){
+		// 	 $this->Commentaire_ID = $Commentaire_ID;
+		// }
 		function getPostID(){
 			return $this->Post_ID;
 		}

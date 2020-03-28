@@ -15,9 +15,9 @@ Class Profil
 	function getProfilID(){
 		return $this->Profil_ID;
 	}
-	function setProfilID($Profil_ID){
-		 $this->Profil_ID = $Profil_ID;
-	}
+	// function setProfilID($Profil_ID){
+	// 	 $this->Profil_ID = $Profil_ID;
+	// }
 	function getProfilNom(){
 		return $this->ProfilNom;
 	}

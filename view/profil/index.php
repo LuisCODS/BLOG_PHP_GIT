@@ -10,7 +10,9 @@
            <h2><i class="far fa-address-card"></i> Profils</h2> 
         </div>   
         <div class="col-md-1">
-           <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ModalCadastro"><i class="fas fa-plus"></i> </button>
+        <!--ici, c'est le (data-target=".ModalCadastro) que accionne le fichier ajouter.php pour le modal -->    
+       <button type="button" class="btn btn-primary" data-toggle="modal" 
+                    data-target=".ModalCadastro"><i class="fas fa-plus"></i> </button>
         </div>        
     </div>
     <div class="row">
@@ -40,11 +42,8 @@
         </div>
     </div>
 </div> 
-<!-- __________________________ FIN RENDER PAGE ________________________-->
 
-
-
-
+<!-- ______________ FIN RENDER PAGE ________________________-->
 
 
 <!--  MODAL: POUR LE BUTTON -->
