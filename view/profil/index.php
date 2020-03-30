@@ -1,7 +1,6 @@
 <!--  HEAD  -->  
 <?php include '../../includes/head.php'; ?> 
 
-
 <!-- _________________ RENDER PAGE -  _________________-->
 
 <div class="container-fluid">
@@ -10,7 +9,7 @@
            <h2><i class="far fa-address-card"></i> Profils</h2> 
         </div>   
         <div class="col-md-1">
-        <!--ici, c'est le (data-target=".ModalCadastro) que accionne le fichier ajouter.php pour le modal -->    
+         <!--MODAL -->    
        <button type="button" class="btn btn-primary" data-toggle="modal" 
                     data-target=".ModalCadastro"><i class="fas fa-plus"></i> </button>
         </div>        
@@ -44,7 +43,6 @@
 </div> 
 
 <!-- ______________ FIN RENDER PAGE ________________________-->
-
 
 <!--  MODAL: POUR LE BUTTON -->
 <?php include 'includes/ajouter.php'; ?>

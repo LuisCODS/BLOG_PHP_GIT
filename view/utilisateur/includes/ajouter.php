@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="UtilisateurMDP">Mot de passe</label>
-                    <input type="password" class="form-control" id="UtilisateurMDP" name="UtilisateurMDP">
+                    <input type="password" class="form-control" id="UtilisateurMDP" name="UtilisateurMDP" autocomplete="on">
                 </div>
                 <div class="form-group">
                     <label for="UtilisateurEmail">Email</label>
