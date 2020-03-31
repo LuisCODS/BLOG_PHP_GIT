@@ -16,7 +16,7 @@
                <h1 class="mb-4">Blog PHP</h1>            
                <form>
                     <input type="text" placeholder="Nom utilisateur" name="UtilisateurNickName" id="UtilisateurNickName" class="form-control mb-4">  
-                    <input type="password" placeholder="Mot de passe" class="form-control mb-4" id="UtilisateurMDP">
+                    <input type="password" autocomplete ="on" placeholder="Mot de passe" class="form-control mb-4" id="UtilisateurMDP">
                     <button type="button" id="btnLogin" 
                             class="form-control btn btn-primary"  
                             onclick="callRedirection()" >

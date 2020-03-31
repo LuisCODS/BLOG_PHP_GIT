@@ -10,16 +10,8 @@
         <div class="modal-body">
            <form>
                 <div class="form-group">
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <label for="ProfilNom">Nom</label>
                     <input type="text" maxlength="50" class="form-control" id="ProfilNom" name="ProfilNom">
-=======
-=======
->>>>>>> parent of 18bfef9... Projeto Completo PHP 28
-                    <label for=""ProfilNom>Nom</label>
-                    <input type="text" class="form-control" id="ProfilNom" name="ProfilNom">
->>>>>>> parent of 18bfef9... Projeto Completo PHP 28
                 </div>
             </form>
         </div>

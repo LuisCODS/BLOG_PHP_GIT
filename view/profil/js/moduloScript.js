@@ -26,31 +26,5 @@ $('#btnAjouter').click(function()
 	}).done(function(msg){
 		//var msnRetorno;
 		alert(msg);
-		// if(msg==true){
-		// 	msnSucess = "Enregistré avec sucess!";
-		// }else{
-		// 	msnSucess = msg;
-		// }		
-		// var msnRetorno = (msg==true) ? "Enregistré avec sucess!" : msg;
-		// $.confim({
-		// 	title:'Attention',
-		// 	content: msnRetorno,
-		// 	buttons: {
-		// 		Ok: ()=>{}
-
-		// 		}
-		// });
 	  });
 });
-
-
-
-
-=======
-// Alcanca os objetos no HTML (butao ajouter du modal)
-$('#btnAjouter')
->>>>>>> parent of 18bfef9... Projeto Completo PHP 28
-=======
-// Alcanca os objetos no HTML (butao ajouter du modal)
-$('#btnAjouter')
->>>>>>> parent of 18bfef9... Projeto Completo PHP 28

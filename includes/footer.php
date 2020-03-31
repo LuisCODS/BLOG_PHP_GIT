@@ -1,6 +1,6 @@
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PLUGINS - LAYOUT- FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
-        <script src="../../plugins/jquery/jquery-3.4.1.min.js/"></script>
+        <script src="../../plugins/jquery/jquery-3.4.1.min.js"></script>
         <script src="../../plugins/popper.min.js"></script>        
         <script src="../../plugins/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script><!-- Bootstrap js --> 
 	    <script src="../../plugins/jquery/jquery-confirm-v3.3.4/dist/jquery-confirm.min.js"></script> <!-- MS de confirmation  -->  
