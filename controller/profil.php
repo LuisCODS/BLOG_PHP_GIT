@@ -10,7 +10,7 @@
 				$profil    = new Profil(null, $ProfilNom);
 				$profilDAO = new ProfilDAO();			
 				$profilDAO->insert($profil);
-				echo"Insertion done";
+				echo"Profil inseré avec sucess!";
 			break;
 		case 'update':
 			echo "Données mis à jour ";
