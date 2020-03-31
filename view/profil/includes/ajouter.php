@@ -19,7 +19,7 @@
            <form id="formProfilAjouter">
                 <div class="form-group">
                     <label for="ProfilNom">Nom</label>
-                    <input type="text" class="form-control" id="ProfilNom" name="ProfilNom">
+                    <input type="text" maxlength="50" class="form-control" id="ProfilNom" name="ProfilNom">
                 </div>
             </form>
         </div>

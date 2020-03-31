@@ -19,10 +19,11 @@ include'../includes/Connection.class.php';
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $profilNom );
+					// si true, return 1
 					return $stmt->execute();
 
 			} catch (PDOException $e) {
-				echo 'Erro: '. $e;
+				echo 'Erreur insertion: '. $e;
 			}
 		}
 

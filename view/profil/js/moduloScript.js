@@ -12,7 +12,7 @@ $('#btnAjouter').click(function()
 	var profilController ='../../controller/profil.php';
 	// GET ALL FORM DATE
 	var formData   = $("#formProfilAjouter").serialize();
-	var actionType = 'action=update';// LE TYPE D'ACTION
+	var actionType = 'action=insert';// LE TYPE D'ACTION
 	//alert(formData);
 	$.ajax({
 		// METODO DE L'ENVOIS DU FORM
@@ -24,8 +24,23 @@ $('#btnAjouter').click(function()
 
 	// EXIBE ALGO QUANDO TERMINAD0
 	}).done(function(msg){
+		//var msnRetorno;
 		alert(msg);
-	});
+		// if(msg==true){
+		// 	msnSucess = "Enregistré avec sucess!";
+		// }else{
+		// 	msnSucess = msg;
+		// }		
+		// var msnRetorno = (msg==true) ? "Enregistré avec sucess!" : msg;
+		// $.confim({
+		// 	title:'Attention',
+		// 	content: msnRetorno,
+		// 	buttons: {
+		// 		Ok: ()=>{}
+
+		// 		}
+		// });
+	  });
 });
 
 
