@@ -8,23 +8,6 @@
 //  (btnAjouter from ajouter.php)
 $('#btnAjouter').click(function()
 {
-	// URL:PAGE QUI RECOIT LA REQUISITION 
-	var profilController ='../../controller/profil.php';
-	// GET ALL FORM DATE
-	var formData   = $("#formProfilAjouter").serialize();
-	var actionType = 'action=insert';// LE TYPE D'ACTION
-	//alert(formData);
-	$.ajax({
-		// METODO DE L'ENVOIS DU FORM
-		method: "POST", 
-		// PAGE OÙ SERA ENVOYÉ LES DONNÉS 
-		url:profilController,
-		// L'ACTION ET LES DONNÉES À ÊTRE ENVOYÉS
-		data: actionType+'&'+formData
-
-	// EXIBE ALGO QUANDO TERMINAD0
-	}).done((msg)=>{
-		//var msnRetorno;
-		alert(msg);
-	  });
+		alert("msg");
+	  
 });

@@ -7,26 +7,5 @@ extract($_POST);
 echo $ProfilNom;
 
 
-// switch ($action) 
-// {
-// 	case 'insert':
-// 			$profil    = new Profil(null, $ProfilNom);
-// 			$profilDAO = new ProfilDAO();
-			
-// 			echo $profilDAO->insert($profil);
-// 		break;
-// 	case 'update':
-// 		echo "Données mis à jour ";
-// 		break;
-// 	case 'delete':
-// 		echo "delete ";
-// 		break;
-// 	default:
-// 		echo "none";
-// 		break;
-// }
-
-
-
 ?>
 
