@@ -3,15 +3,17 @@
 //  DONNÉS(DE FACON ASSICRONNE)PROVENANT DU FICHIER ajouter.php
 // ----------------------------------------------------------
 
+// URL:PAGE QUI RECOIT LA REQUISITION 
+var profilController ='../../controller/profil.php';
+
 
 // GET DOM OBJET by id (btnAjouter from ajouter.php)
 $('#btnAjouter').click(()=>    
 {
-		// URL:PAGE QUI RECOIT LA REQUISITION 
-	var profilController ='../../controller/profil.php';
 	// GET ALL FORM DATE BY ATTRIBUT ID, LIKE: ProfilNom=luis
 	var formData   = $("#formProfilAjouter").serialize();
-	var actionType = 'action=insert';// LE TYPE D'ACTION
+	// LE TYPE D'ACTION
+	var actionType = 'action=insert';
 
 	$.ajax({
 		// METODO DE L'ENVOIS DU FORM
@@ -20,7 +22,7 @@ $('#btnAjouter').click(()=>
 		url:profilController,
 		// L'ACTION ET LES DONNÉES DU FORM À ÊTRE RECUPERÉS
 		data: actionType+'&'+formData
-	}).done(function(msg){
+	}).done((msg)=>{
 		alert(msg);
 	});
 });
