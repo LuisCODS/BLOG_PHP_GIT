@@ -1,4 +1,3 @@
-<!--  HEAD  -->  
 <?php include '../../includes/head.php'; ?> 
 
 

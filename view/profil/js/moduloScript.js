@@ -23,7 +23,7 @@ $('#btnAjouter').click(function()
 		data: actionType+'&'+formData
 
 	// EXIBE ALGO QUANDO TERMINAD0
-	}).done(function(msg){
+	}).done((msg)=>{
 		//var msnRetorno;
 		alert(msg);
 	  });
