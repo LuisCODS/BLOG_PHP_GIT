@@ -6,8 +6,8 @@
 
 // GET OBJET(BUTTON) OF THE DOM TO EXECUTE THE FUNCTION
 //  (btnAjouter from ajouter.php)
-$('#btnAjouter').click(function()
-{
-		alert("msg");
+// $('#btnAjouter').click(function()
+// {
+// 		alert("msg");
 	  
-});
+// });
