@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //  ----------------------------------------------------------
 //  CE MODULE EST RESPONSABLE POUR TRAITER LES 
 //  DONNÉS(DE FACON ASSICRONNE)PROVENANT DU FICHIER ajouter.php
@@ -46,3 +47,7 @@ $('#btnAjouter').click(function()
 
 
 
+=======
+// Alcanca os objetos no HTML (butao ajouter du modal)
+$('#btnAjouter')
+>>>>>>> parent of 18bfef9... Projeto Completo PHP 28
