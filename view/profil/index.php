@@ -1,8 +1,7 @@
 <?php include '../../includes/head.php'; ?> 
 
 
-<!-- _________________ RENDER PAGE -  _________________-->
-
+<!--  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BEGIN RENDER PAGE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-md-11">
@@ -41,12 +40,10 @@
         </div>
     </div>
 </div> 
-
-<!-- ______________ FIN RENDER PAGE ________________________-->
+<!--  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FIN RENDER PAGE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
 
 <!--  MODAL: POUR LE BUTTON -->
 <?php include 'includes/ajouter.php'; ?>
 
-<!--  - LAYOUT -->
 <?php include '../../includes/footer.php'; ?>

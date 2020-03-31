@@ -1,3 +1,5 @@
+<!-- ______________________________________  BEGIN INCLUDE MODAL-AJOUTER   ______________________________________-->
+
 <div class="modal fade ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -8,7 +10,7 @@
             </button>
         </div>
         <div class="modal-body">
-           <form>
+           <form id="formProfilAjouter">
                 <div class="form-group">
                     <label for="ProfilNom">Nom</label>
                     <input type="text" maxlength="50" class="form-control" id="ProfilNom" name="ProfilNom">
@@ -21,3 +23,4 @@
     </div>
   </div>
 </div>
+<!-- ______________________________________  END INCLUDE MODAL-AJOUTER   ______________________________________-->

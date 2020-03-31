@@ -1,4 +1,4 @@
-        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PLUGINS - LAYOUT- FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<!-- ______________________________________  BEGIN INCLUDE FOOTER   ______________________________________-->
 
         <script src="../../plugins/jquery/jquery-3.4.1.min.js"></script>
         <script src="../../plugins/popper.min.js"></script>        
@@ -8,3 +8,5 @@
         <script type="text/javascript" src="js/moduleFunction.js"></script> <!-- JS DU MODULE--> 
     </body>
 </html>
+<!-- ______________________________________  END INCLUDE FOOTER   ______________________________________-->
+

@@ -21,7 +21,6 @@ include'../includes/Connection.class.php';
 					$stmt->bindParam(1, $profilNom );
 					// si true, return 1
 					return $stmt->execute();
-
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;
 			}

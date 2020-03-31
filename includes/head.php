@@ -1,4 +1,4 @@
-<!-- XXXXXXXXXX  HEAD - LAYOUT  XXXXXXXXXX-->
+<!-- ______________________________________  BEGIN INCLUDE HEAD   ______________________________________-->
 <!doctype html>
 <html lang="en">
     <head>
@@ -13,7 +13,7 @@
         <title>Blog PHP -Login</title>
     </head>
     
-    <!--  ---------------------------- NAVBAR ---------------------------- -->
+    <!--   NAVBAR  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5" >          
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -43,3 +43,4 @@
             <a href="../../view/login/index.php"><i class="fas fa-sign-out-alt"></i> Quitter</a>
         </div>
     </nav> 
+<!-- ______________________________________  END INCLUDE HEAD   ______________________________________-->
