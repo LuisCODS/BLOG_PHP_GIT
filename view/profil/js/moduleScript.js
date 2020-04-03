@@ -3,15 +3,26 @@
 //  DONNÉS(DE FACON ASSICRONNE)PROVENANT DU FICHIER ajouter.php
 // ----------------------------------------------------------
 
-// URL:PAGE QUI RECOIT LA REQUISITION 
+// URL:PAGE QUI VA RECEVOIT LA REQUISITION 
 var profilController ='../../controller/profil.php';
 
+// $(()=>{
+// 	alert("TESTE");
+// });
 
-// GET DOM OBJET by id (btnAjouter from ajouter.php)
+// $(function(){
+// 	alert("TESTE");
+//  });
+
+//Cette fonction est declenchée dès que le button
+//...(btnAjouter from ajouter.php) du modal est pesé.
 $('#btnAjouter').click(()=>    
-{
-	// GET ALL FORM DATE BY ATTRIBUT ID, LIKE: ProfilNom=luis
+{	
+	// Recoit tous les champs du formulaire  serialisés
 	var formData   = $("#formProfilAjouter").serialize();
+
+	//echo (formData);
+
 	// LE TYPE D'ACTION
 	var actionType = 'action=insert';
 
@@ -23,6 +34,12 @@ $('#btnAjouter').click(()=>
 		// L'ACTION ET LES DONNÉES DU FORM À ÊTRE RECUPERÉS
 		data: actionType+'&'+formData
 	}).done((msg)=>{
-		alert(msg);
+		$.confirm({
+			title: 'Attention!',
+			content: msg,
+			buttons: {
+				Ok: ()=>{}				
+			}
+		});
 	});
 });

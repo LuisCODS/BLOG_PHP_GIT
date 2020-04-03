@@ -1,7 +1,7 @@
 <?php
 	include '../model/Profil.class.php';
 	include '../dao/ProfilDAO.class.php';
-	// GET DATA FROM FORM
+	// GET ALL DATA FROM FORM
 	extract($_POST);
 
 	switch ($action) 

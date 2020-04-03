@@ -18,9 +18,10 @@
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" id="btnAjouter" class="btn btn-success"><i class="far fa-save"></i> Ajouter</button>
+            <button class="close" data-dismiss="modal"  type="button" id="btnAjouter" ><i class="far fa-save"></i> Ajouter</button>
         </div>
     </div>
   </div>
 </div>
+
 <!-- ______________________________________  END INCLUDE MODAL-AJOUTER   ______________________________________-->
