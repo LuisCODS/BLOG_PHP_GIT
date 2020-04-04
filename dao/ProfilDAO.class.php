@@ -13,13 +13,15 @@ include'../includes/Connection.class.php';
 		}
 
 	// ______________________________ CDRUD ___________________________
+
+		//AJOUTER
 		function insert(Profil $profil){
 			try {
 					$profilNom = $profil->getProfilNom();
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $profilNom );
-					// return  true or false
+					// return:  true/false
 					return $stmt->execute();
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;
@@ -53,13 +55,18 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		function getProfil(){
+		//Liste tous les profil et retourn les entités trouvé.
+		//Retour: un tableau de profil en format json.
+		function getProfil()
+		{
 
 			$sql = 'select Profil_ID, ProfilNom from profil';
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
-			$rs = $stmt->fetchall(PDO::FETCH_ASSOC); //pega o resutado da consulta
-			 return $rs ;
+			// Get all objets in array
+			$tableau = $stmt->fetchall(PDO::FETCH_ASSOC); 
+			//Retourn l'array converti en json(text), car HTML(browser) only ready string.
+			 return json_encode($tableau);
 		}
 	}
 
