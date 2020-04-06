@@ -1,5 +1,5 @@
 <!--  --------------------------------------------------------------
-  CETTE PAGE RECOIT LES REQUISITION AJAX PROVENANT DU SCRIPT DU 
+  CETTE PAGE RECOIT LES REQUISITIONS AJAX PROVENANT DU SCRIPT DU 
   ... MODULE(moduleScript.js)
  --------------------------------------------------------------- -->
 
