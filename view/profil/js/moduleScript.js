@@ -18,17 +18,7 @@ $(()=>{
 		// Reponse de la requisition(callback):
 		// jsonData: tableau des profils en format json
 		}).done((jsonData)=>{
-			//New requisition pour envoyer le tableau json au template 
-			$.ajax({
-				method: 'POST', 
-				url:'template/table-profil.php',
-				//doit être passé par une variable
-				data: "obj="+jsonData
-				// Reponse de la requisition:
-				// template: 
-			}).done((template)=>{
-				alert(template);
-			})
+			alert(jsonData);
 		});
 });
 
@@ -41,7 +31,7 @@ $('#btnAjouter').click(()=>
 	// Recoit l'attribute name + sa valeur d'entrée 
 	//Ex: ProfilNom=Luis | just call echo (formData);  
 	var formData   = $("#formProfilAjouter").serialize();
-	// Action destinnée
+	// Action qui va traiter la requisition
 	var actionType = 'action=insert';
 
 	// ___________________ Requisition ___________________
@@ -50,18 +40,16 @@ $('#btnAjouter').click(()=>
 		method: "POST", 
 		// Page qui recoit les données
 		url:profilController,
-		// L'ACTION ET LES DONNÉES DU FORM À ÊTRE RECUPERÉS
+		// Envois à l'action les données du form
 		data: actionType+'&'+formData
-		// Reponse de la requisition:
-		// msg: true/false
+		// Reponse de l'insertion 
 	}).done((msg)=>{
-		// SHORT IF:
-		// Si la requette = true, la variable recoit la string
-		//... Sinon elle recoit l'erreur.
-		var reponse = (msg==true) ? "Enregistré avec sucess!" : msg		
+		// Shorthand  IF:
+		// "(condition) ? (true return value) : (false return value)"
+		var retorno = (msg==true) ? "Enregistré avec sucess!" : msg;	
 		$.confirm({
 			title: 'Attention!',
-			content: reponse,
+			content: retorno,
 			buttons: {
 				Ok: ()=>{}				
 			}

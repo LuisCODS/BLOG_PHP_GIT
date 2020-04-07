@@ -1,7 +1,3 @@
-<!--  --------------------------------------------------------------
-  CETTE PAGE RECOIT LES REQUISITIONS AJAX PROVENANT DU SCRIPT DU 
-  ... MODULE(moduleScript.js)
- --------------------------------------------------------------- -->
 
 <?php
 	include '../model/Profil.class.php';
@@ -16,27 +12,27 @@
 	{
 		case 'insert':
 				$profil    = new Profil(null, $ProfilNom);
-				$profilDAO = new ProfilDAO();			
-				echo $profilDAO->insert($profil);
-			break;
-
+				$profilDAO = new ProfilDAO();						
+			    echo $profilDAO->insert($profil);//return:1
+			    //echo "Profil inserré avec sucess! ";
+			    break;
 		case 'update':
 			echo "Données mis à jour ";
 			break;
-
 		case 'delete':
 			echo "delete ";
 			break;
-
 		case 'getProfil':
 			$profilDAO = new ProfilDAO();	
 			echo $profilDAO->getProfil();
 			break;
-
 		default:
 			echo "none";
 			break;
 	}
+
+
+
 
 ?>
 

@@ -20,8 +20,8 @@ include'../includes/Connection.class.php';
 					$profilNom = $profil->getProfilNom();
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $profilNom );
-					// return:  true/false
+					$stmt->bindParam(1, $profilNom);
+					// si l'execute est ok, return 1  
 					return $stmt->execute();
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;
@@ -59,13 +59,12 @@ include'../includes/Connection.class.php';
 		//Retour: un tableau de profil en format json.
 		function getProfil()
 		{
-
 			$sql = 'select Profil_ID, ProfilNom from profil';
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
-			// Get all objets in array
+			// Array de Profil
 			$tableau = $stmt->fetchall(PDO::FETCH_ASSOC); 
-			//Retourn l'array converti en json(text), car HTML(browser) only ready string.
+			//Retourn un array  en json,car HTML(browser) only ready string.
 			 return json_encode($tableau);
 		}
 	}
