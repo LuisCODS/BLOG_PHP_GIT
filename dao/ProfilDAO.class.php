@@ -15,13 +15,14 @@ include'../includes/Connection.class.php';
 	// ______________________________ CDRUD ___________________________
 
 		//AJOUTER
-		function insert(Profil $profil){
+		function insert(Profil $profil)
+		{
 			try {
 					$profilNom = $profil->getProfilNom();
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $profilNom);
-					// si l'execute est ok, return 1  
+					// si  ok, return 1  
 					return $stmt->execute();
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;

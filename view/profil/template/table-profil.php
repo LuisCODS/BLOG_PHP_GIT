@@ -4,7 +4,7 @@
  --------------------------------------------------------------- -->
 <?php
 
-extract($_POST);
+//extract($_POST);
 
 
    //Parcour un array d'objet déjà decodé

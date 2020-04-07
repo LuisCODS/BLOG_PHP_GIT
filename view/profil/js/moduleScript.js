@@ -23,7 +23,6 @@ $(()=>{
 });
 
 
-
 //Cette fonction est declenchée dès que le button btnAjouter
 //...( from ajouter.php) du modal est appuyé.
 $('#btnAjouter').click(()=>    
@@ -31,7 +30,7 @@ $('#btnAjouter').click(()=>
 	// Recoit l'attribute name + sa valeur d'entrée 
 	//Ex: ProfilNom=Luis | just call echo (formData);  
 	var formData   = $("#formProfilAjouter").serialize();
-	// Action qui va traiter la requisition
+	// Action destinnée
 	var actionType = 'action=insert';
 
 	// ___________________ Requisition ___________________
@@ -40,16 +39,18 @@ $('#btnAjouter').click(()=>
 		method: "POST", 
 		// Page qui recoit les données
 		url:profilController,
-		// Envois à l'action les données du form
+		// L'ACTION ET LES DONNÉES DU FORM À ÊTRE RECUPERÉS
 		data: actionType+'&'+formData
-		// Reponse de l'insertion 
+		// Reponse de la requisition:
+		// msg: true/false
 	}).done((msg)=>{
-		// Shorthand  IF:
-		// "(condition) ? (true return value) : (false return value)"
-		var retorno = (msg==true) ? "Enregistré avec sucess!" : msg;	
+		// SHORT IF:
+		// Si la requette = true, la variable recoit la string
+		//... Sinon elle recoit l'erreur.
+		var reponse = (msg==true) ? "Enregistré avec sucess!" : msg		
 		$.confirm({
 			title: 'Attention!',
-			content: retorno,
+			content: reponse,
 			buttons: {
 				Ok: ()=>{}				
 			}
