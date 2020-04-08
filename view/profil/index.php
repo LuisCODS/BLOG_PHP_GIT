@@ -12,29 +12,8 @@
         </div>        
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Niveau</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Admin</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                     <tr>
-                        <td>Lecteur</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                    <tr>
-                        <td>Prive</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-md-12" id="listTemplate">
+           <!-- CHARGE LE TEMPLATE ICI !-->
         </div>
     </div>
 </div> 

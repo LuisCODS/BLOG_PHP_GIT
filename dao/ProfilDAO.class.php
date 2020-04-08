@@ -56,14 +56,14 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		//Liste tous les profil et retourn les entités trouvé.
-		//Retour: un tableau de profil en format json.
+		//Méthode qui fait une SELECT de 2 champs dans la BD.
+		//Retour: un tableau en format json.
 		function getProfil()
 		{
 			$sql = 'select Profil_ID, ProfilNom from profil';
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
-			// Array de Profil
+			// Contient un array de Profil
 			$tableau = $stmt->fetchall(PDO::FETCH_ASSOC); 
 			//Retourn un array  en json,car HTML(browser) only ready string.
 			 return json_encode($tableau);

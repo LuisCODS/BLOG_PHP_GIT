@@ -13,12 +13,19 @@
            <form id="formProfilAjouter">
                 <div class="form-group">
                     <label for="ProfilNom">Nom</label>
-                    <input type="text" maxlength="50" class="form-control" id="ProfilNom" name="ProfilNom">
+                    <input type="text" 
+                            maxlength="50" 
+                            class="form-control" 
+                            id="ProfilNom" 
+                            name="ProfilNom">
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-            <button class="close" data-dismiss="modal"  type="button" id="btnAjouter" ><i class="far fa-save"></i> Ajouter</button>
+            <button class="close" data-dismiss="modal"  
+                    type="button" 
+                    id="btnAjouter" ><i class="far fa-save"></i> Ajouter
+            </button>
         </div>
     </div>
   </div>
