@@ -23,7 +23,8 @@
 	        <td><?php echo $profil->ProfilNom ?></td>
 	        <td>
 	        	<button type="button" 
-	        			class="btn btn-dark btnEditer" obj='<?php echo json_encode($profil); ?>'>
+	        			class="btn btn-dark btnEditer" 
+	        			obj='<?php echo json_encode($profil); ?>'>
 	        			<i class="fas fa-user-edit"></i>
 	        		 Editer
 	       		 </button>

@@ -6,9 +6,7 @@
            <h2><i class="far fa-address-card"></i> Profils</h2> 
         </div>   
         <div class="col-md-1">
-        <!--ici, c'est le (data-target=".ModalCadastro) que accionne le fichier ajouter.php pour le modal -->    
-       <button type="button" class="btn btn-primary" data-toggle="modal" 
-                    data-target=".ModalCadastro"><i class="fas fa-plus"></i> </button>
+       <button type="button" class="btn btn-primary" id="btnPlus" ><i class="fas fa-plus"></i> </button>
         </div>        
     </div>
     <div class="row">

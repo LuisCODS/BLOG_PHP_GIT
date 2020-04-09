@@ -11,10 +11,12 @@
         </div>
         <div class="modal-body">
            <form id="formProfilAjouter">
+                <input type="hidden" id="Profil_ID" name="Profil_ID" >
                 <div class="form-group">
                     <label for="ProfilNom">Nom</label>
                     <input type="text" 
-                            maxlength="50" 
+                            minlength="1"
+                            maxlength="50"
                             class="form-control" 
                             id="ProfilNom" 
                             name="ProfilNom">

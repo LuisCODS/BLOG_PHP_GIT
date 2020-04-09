@@ -29,7 +29,7 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		function upDate(Profil $p){
+		function update(Profil $p){
 			try {
 
 					$profilNom = $p->getProfilNom();

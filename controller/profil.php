@@ -20,7 +20,8 @@
 		    break;
 
 		case 'update':
-			echo "Données mis à jour ";
+			$profil    = new Profil($Profil_ID, $ProfilNom);		
+			$profilDAO->update($profil);//return:1
 			break;
 
 		case 'delete':
