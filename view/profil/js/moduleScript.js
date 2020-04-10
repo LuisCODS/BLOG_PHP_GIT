@@ -31,13 +31,14 @@ $(()=>{
 				// Charge le template dans la div de l'index.php du profil
 				$("#listTemplate").html(template);
 				// declenche dès que le button btnEditer(table-profil.php) est appuyé
+				//...ele é pego pela class.
 				$('.btnEditer').click(function() 
 				{
 					//Open the modal windows
 					$('.ModalCadastro').modal("show");				 	
-					//convert en json l'attribut du button
+					//convert en json l'objet du button
 					var obj = JSON.parse($(this).attr("obj") );
-					//Pega as propriedade do objeto
+					//Show object propertys on form input
 					$("#Profil_ID").val(obj.Profil_ID);
 					$("#ProfilNom").val(obj.ProfilNom);					
 				});
@@ -74,9 +75,10 @@ $('#btnAjouter').click(()=>
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
 		//Get ID from profil
-		var Profil_ID = $("#Profil_ID").value;	
+		var Profil_ID = $("#Profil_ID").val();	
 		//Si le champ est vide, action = insert, sinon action = update
-		var actionType = (Profil_ID == "") ?'action=insert' : 'action=update';
+		var actionType = (Profil_ID=="") ?'action=insert' : 'action=update';
+		//alert(actionType);
 
 		// REQUISITION asynchrone 
 		$.ajax({
@@ -97,8 +99,9 @@ $('#btnAjouter').click(()=>
 				});
 			});
 
-		   //Refresh: si true(forcer un rechargement à partir du serveur plutôt que du cache.)
-		    //location.reload(true);
+		   //Refresh la page(reload) 
+		   //...si true(forcer un rechargement à partir du serveur plutôt que du cache.)
+		    location.reload(true);
 
 	}else{
 		alert("Champ vide!");
@@ -135,6 +138,10 @@ $('#btnSupprimer').click(()=>
 				}
 			});
 		});
+		
+	   //Refresh la page(reload) 
+	   //...si true(forcer un rechargement à partir du serveur plutôt que du cache.)
+	    location.reload(true);
 }); 
 
 

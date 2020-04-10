@@ -28,7 +28,7 @@
             <button class="btn-success"
                     data-dismiss="modal"  
                     type="button" 
-                    id="btnAjouter" >
+                    id="btnAjouter">
                     <i class="far fa-save"></i> Ajouter
             </button> 
             <button class="btn-danger" 
