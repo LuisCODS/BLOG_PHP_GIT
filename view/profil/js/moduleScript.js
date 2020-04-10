@@ -2,7 +2,7 @@
 //  PAGE  RESPONSABLE POUR ELABORER LES REQUISITIONS AJAX ASYNCHRONES.
 // -------------------------------------------------------------------
 
-// Var global: URL qui va recevoit les données.
+//  portée globale 
 var profilController ='../../controller/profil.php';
 
 
@@ -58,10 +58,7 @@ $('#btnPlus').click(()=>
 	//Clean input from form
 	$("#Profil_ID").val("");
 	$("#ProfilNom").val("");
-	//data-toggle="modal" data-target=".ModalCadastro"
 });
-
-
 
 
 //========================================================================
@@ -69,20 +66,19 @@ $('#btnPlus').click(()=>
 //   ...( from ajouter.php) du modal est appuyé.
 //========================================================================
 $('#btnAjouter').click(()=>    
-{	 
+{	
+	var inputFild = document.getElementById("ProfilNom").value;
 
-	var isFildVide = document.getElementById("ProfilNom").value;
-
-	if (isFildVide != "") 
+	if (inputFild != "") 
 	{
-		//get all inputs from form 
+		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
-		//Get ID from input
+		//Get ID from profil
 		var Profil_ID = $("#Profil_ID").value;	
 		//Si le champ est vide, action = insert, sinon action = update
 		var actionType = (Profil_ID == "") ?'action=insert' : 'action=update';
 
-		//  REQUISITION asynchrone 
+		// REQUISITION asynchrone 
 		$.ajax({
 			method: "POST", 
 			url:profilController,
@@ -100,11 +96,45 @@ $('#btnAjouter').click(()=>
 					}
 				});
 			});
+
+		   //Refresh: si true(forcer un rechargement à partir du serveur plutôt que du cache.)
+		    //location.reload(true);
+
 	}else{
-		alert("Champ vide! ");
+		alert("Champ vide!");
 	}
+}); 
 
 
+//========================================================================
+//   Cette fonction est declenchée dès que le button btnSupprimer
+//   ...( from ajouter.php) du modal est appuyé.
+//========================================================================
+$('#btnSupprimer').click(()=>    
+{	
+	//get all inputs from form (Profil_ID et ProfilNom )
+	var champs   = $("#formProfilAjouter").serialize();
+
+	var actionType = 'action=delete';
+
+	// REQUISITION asynchrone 
+	$.ajax({
+		method: "POST", 
+		url:profilController,
+		data: actionType+'&'+champs
+		
+		}).done((callBack)=>
+		{
+			var reponse = (callBack!=null) ? "Supprimé avec sucess!" : callBack;
+			//Windos popup du plugin	
+			$.confirm({
+				title: 'Attention!',
+				content: reponse,
+				buttons: {
+					Ok: ()=>{}				
+				}
+			});
+		});
 }); 
 
 

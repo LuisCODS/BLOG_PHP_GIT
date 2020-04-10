@@ -29,7 +29,8 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		function update(Profil $p){
+		function update(Profil $p)
+		{
 			try {
 
 					$profilNom = $p->getProfilNom();
@@ -45,11 +46,13 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		function delete($Profil_ID){
+		function delete($Profil_ID)
+		{
 			try {
 					$sql = 'delete from profil where Profil_ID = ? ';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $Profil_ID);
+					//Return true or False
 					return $stmt->execute();					
 			} catch (PDOException $e) {
 				echo "Erro: ". $e;
