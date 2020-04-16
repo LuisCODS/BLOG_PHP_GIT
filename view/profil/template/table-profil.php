@@ -13,7 +13,8 @@
 	<tbody>
 
 <?php
-	//recupere la variable obj(tableau json du profil) du callback(moduleScript.js) 
+	//recupere la variable obj(tableau json du profil) 
+	//du callback(moduleScript.js) 
 	extract($_POST);
 	//Decodes a JSON string into a PHP objet
 	foreach( json_decode($obj) as $profil)	

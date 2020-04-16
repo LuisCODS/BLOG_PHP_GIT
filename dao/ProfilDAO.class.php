@@ -22,8 +22,7 @@ include'../includes/Connection.class.php';
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $profilNom);
-					// si  ok, return 1  
-					return $stmt->execute();
+					return $stmt->execute();//Return true/False	
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;
 			}
@@ -32,18 +31,16 @@ include'../includes/Connection.class.php';
 		function update(Profil $p)
 		{
 			try {
-
 					$profilNom = $p->getProfilNom();
 					$ProfilID = $p->getProfilID();
 					$sql = 'update profil set ProfilNom = ? where Profil_ID = ? ';
 					$stmt = $this->cn->prepare($sql);
 					$stmt->bindParam(1, $profilNom );
-					$stmt->bindParam(2, $ProfilID);
-					
-					return $stmt->execute();					
-			} catch (PDOException $e) {
-				echo "Erro: ". $e;
-			}
+					$stmt->bindParam(2, $ProfilID);					
+					return $stmt->execute();//Return true/False						
+				} catch (PDOException $e) {
+					echo "Erro: ". $e;
+				}
 		}
 
 		function delete($Profil_ID)
@@ -51,9 +48,8 @@ include'../includes/Connection.class.php';
 			try {
 					$sql = 'delete from profil where Profil_ID = ? ';
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $Profil_ID);
-					//Return true or False
-					return $stmt->execute();					
+					$stmt->bindParam(1, $Profil_ID);					
+					return $stmt->execute();//Return true/False					
 			} catch (PDOException $e) {
 				echo "Erro: ". $e;
 			}
@@ -65,7 +61,7 @@ include'../includes/Connection.class.php';
 		{
 			$sql = 'select Profil_ID, ProfilNom from profil';
 			$stmt = $this->cn->prepare($sql);
-			$stmt->execute();
+			$stmt->execute();//Return true/False	
 			// Contient un array de Profil
 			$tableau = $stmt->fetchall(PDO::FETCH_ASSOC); 
 			//Retourn un array  en json,car HTML(browser) only ready string.

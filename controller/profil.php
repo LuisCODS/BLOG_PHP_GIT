@@ -1,39 +1,38 @@
 <?php
  // --------------------------------------------------------------
- // CONTROLLEUR
+ // CONTROLLEUR DU PROFIL
  //--------------------------------------------------------------- 
 	include '../model/Profil.class.php';
 	include '../dao/ProfilDAO.class.php';
 
 	// Get all form field
 	extract($_POST);
-	//GLOBAL
-	$profilDAO = new ProfilDAO();
 
-	
+	//Obj GLOBAL
+	$profilDAO = new ProfilDAO();	
 
 	switch ($action) 
 	{
 		case 'insert':
 			$newProfil = new Profil(null, $ProfilNom);		
-			$profilDAO->insert($newProfil);//return:1
+			echo $profilDAO->insert($newProfil);//Si ok return 1
 		    break;
 
 		case 'update':
 			$profil = new Profil($Profil_ID, $ProfilNom);		
-			$profilDAO->update($profil);
+			echo $profilDAO->update($profil);//Si ok return 1
 			break;
 
 		case 'delete':
-			$profilDAO->delete($Profil_ID);
+			echo $profilDAO->delete($Profil_ID);//Si ok return 1
 			break;
 
 		case 'getProfil':
-			echo $profilDAO->getProfil();
+			echo $profilDAO->getProfil();//Si ok return 1
 			break;
 			
 		default:
-			echo "none";
+			echo "Aucun action trouvée";
 			break;
 	}
 
