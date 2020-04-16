@@ -2,54 +2,29 @@
 //  PAGE  RESPONSABLE POUR ELABORER LES REQUISITIONS AJAX ASYNCHRONES.
 // -------------------------------------------------------------------
 
-//  portée globale 
+//  PORTÉE GLOBAL 
 var profilController ='../../controller/profil.php';
-
+var strRecherchee = "";
 
 
 //========================================================================
-//  Cette fonction est declenchée dès que la page est rechargée.
+// Cette fonction est declenchée dès que la page est chargée.
 //========================================================================
 $(()=>{
-		var actionType = 'action=getProfil';
+	// Appel le fichier moduleFunction.js
+	lister(strRecherchee);
+});
 
-		//  REQUISITION asynchrone 
-		$.ajax({
-			method:'POST', 
-			url: profilController,
-			data: actionType
-			//CALLBACK: un array json du profil
-		}).done((jsonData)=>{			
-			//  REQUISITION asynchrone
-			$.ajax({
-				method:'POST', 
-				url: 'template/table-profil.php',
-				//le callback jsonData est envoyée par la variable obj
-				data: "obj="+jsonData
-			//CALLBACK: tout le contenu du fichier table-profil.php	
-			}).done((template)=>{
-				// Charge le template dans la div de l'index.php du profil
-				$("#listTemplate").html(template);
-				// declenche dès que le button btnEditer(table-profil.php) est appuyé
-				//...ele é pego pela class.
-				$('.btnEditer').click(function() 
-				{
-					//Open the modal windows
-					$('.ModalCadastro').modal("show");				 	
-					//convert en json l'objet du button
-					var obj = JSON.parse($(this).attr("obj") );
-					//Show object propertys on form input
-					$("#Profil_ID").val(obj.Profil_ID);
-					$("#ProfilNom").val(obj.ProfilNom);	
-					//Show le boutton Supprimer par son ID: btnSupprimer
-					//on javascript sintax:  document.getElementById("btnSupprimer").hidden = false;
-					$("#btnSupprimer").css("display", "block");	
-					//Ajoute la valeur du title h5 du modal
-					$("#ModalTitle").html("Editer Pofil");		
-				});
 
-			})
-		});
+//========================================================================
+//  ZONE DE RECHERCHE: declenchée dès qu'il y a une entrée dans InputBusca.
+//========================================================================
+$('#txtInput').keyup(()=>    
+{
+	//Get textBox value by ID.
+	strRecherchee = $('#txtInput').val();
+	// alert(strRecherchee); //To test
+	lister(strRecherchee);
 });
 
 
@@ -110,8 +85,8 @@ $('#btnAjouter').click(()=>
 					content: reponse,
 					buttons: {
 						Ok: ()=>{
-					         //Refresh la page(reload). Si à true forcer un
-					         //... rechargement à partir du serveur plutôt que du cache.
+					         // Recharge la page actuelle à partir du 
+					         //... serveur, sans utiliser le cache.
 							 location.reload(true);
 						}				
 					}
@@ -148,8 +123,8 @@ $('#btnSupprimer').click(()=>
 				content: reponse,
 				buttons: {
 					Ok: ()=>{
-				         //Refresh la page(reload). Si à true forcer un
-				         //... rechargement à partir du serveur plutôt que du cache.
+				         // Recharge la page actuelle à partir du 
+				         //... serveur, sans utiliser le cache.
 						 location.reload(true);
 					}				
 				}

@@ -57,14 +57,14 @@ include'../includes/Connection.class.php';
 
 		//Méthode qui fait une SELECT de 2 champs dans la BD.
 		//Retour: un tableau en format json.
-		function getProfil()
+		function getProfil($txtInput)
 		{
-			$sql = 'select Profil_ID, ProfilNom from profil';
+			$sql = "select Profil_ID, ProfilNom from profil WHERE ProfilNom like '%$txtInput%' ";
 			$stmt = $this->cn->prepare($sql);
-			$stmt->execute();//Return true/False	
+			$stmt->execute();//Return 1 si ok	
 			// Contient un array de Profil
 			$tableau = $stmt->fetchall(PDO::FETCH_ASSOC); 
-			//Retourn un array  en json,car HTML(browser) only ready string.
+			//Retourn un array en json,car HTML(browser) only ready string.
 			 return json_encode($tableau);
 		}
 	}

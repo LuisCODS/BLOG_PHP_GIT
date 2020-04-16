@@ -5,11 +5,12 @@
 	include '../model/Profil.class.php';
 	include '../dao/ProfilDAO.class.php';
 
-	// Get all form field
+	// Get all form field(action/txtInput)
 	extract($_POST);
 
 	//Obj GLOBAL
 	$profilDAO = new ProfilDAO();	
+
 
 	switch ($action) 
 	{
@@ -28,7 +29,7 @@
 			break;
 
 		case 'getProfil':
-			echo $profilDAO->getProfil();//Si ok return 1
+			echo $profilDAO->getProfil($txtInput);//Si ok return 1
 			break;
 			
 		default:
