@@ -29,8 +29,7 @@ $('#txtInput').keyup(()=>
 
 
 //========================================================================
-// Bouton pour ajouter un nouveau Profil. Cette fonction est declenchée 
-// ... dès que le button btnPlus from index.php est appuyé.
+// BOUTON (+) :
 //========================================================================
 $('#btnPlus').click(()=>    
 {
@@ -51,15 +50,14 @@ $('#btnPlus').click(()=>
 
 /*
 ========================================================================
- Cette fonction est declenchée dès que le button btnAjouter
+ BOUTON AJOUTER: Cette fonction est declenchée dès que le button btnAjouter
   ...( from ajouter.php) du modal est appuyé.
 ========================================================================
 */
 $('#btnAjouter').click(()=>    
 {	
-	var inputFild = document.getElementById("ProfilNom").value;
-
-	if (inputFild != "") 
+	// Si la validation des champs du formulaire est réussi...
+	if( $("#ProfilNom").val() != "" ) 
 	{
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
@@ -76,25 +74,28 @@ $('#btnAjouter').click(()=>
 			data: actionType+'&'+champs
 			//CALLBACK: Si l'insertion ou update a été fait, msg = 1
 			}).done((msg)=>	{
-				var reponse = (msg == 1) ? "Enregistré avec sucess!" : msg;
-				//console.log(msg); to test
+			var reponse = (msg == 1) ? "Enregistré avec sucess!" : msg;
+			//console.log(msg); to test
 
-				//Windos popup	
-				$.confirm({
-					title: 'Attention!',
-					content: reponse,
-					buttons: {
-						Ok: ()=>{
-					         // Recharge la page actuelle à partir du 
-					         //... serveur, sans utiliser le cache.
-							 location.reload(true);
-						}				
-					}
-				});		   
-			});
+			//Windos popup	
+			$.confirm({
+				title: 'Attention!',
+				content: reponse,
+				buttons: {
+					Ok: ()=>{
+				         // Recharge la page actuelle à partir du 
+				         //... serveur, sans utiliser le cache.
+						// location.reload(true);
+						$('#ModalCadastro').modal('toggle');//close modal	
+						 lister(strRecherchee);						 
+					}				
+				}
+			});		   
+		});
 	}else{
-		alert("Champ vide!");
-	}
+		alert("Champs Oligatoire!");
+
+	}	
 }); 
 
 

@@ -49,3 +49,26 @@ function lister(txtInput)
 		})
 	});
 }
+
+
+//Valide la remplissage du formulaire
+// function validerChampsVide()
+// {
+// 	//pour chaque element qui a la class "estVide"
+// 	$(".estVide").each(function()
+// 	{
+// 		//Si le input value est vide
+// 		if( $(this).val() == "" ) {
+		//$("#ProfilNom").focus();	
+// 			//sett a new class
+// 			$(this).addClass("is-invalid");
+// 				return false;
+// 		}else{
+// 			//$(this).addClass("is-valid");
+// 				return true;
+// 		}
+// 	})
+// }
+	//Si textBox input is clean
+	//var champ = $("#ProfilNom").val();	
+	//Set class invalid
