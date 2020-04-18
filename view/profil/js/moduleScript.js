@@ -8,18 +8,15 @@ var strRecherchee = "";
 
 
 //========================================================================
-// Cette fonction est declenchée dès que la page est chargée.
+// All methods here i'll be call when page is loaded.
 //========================================================================
 $(()=>{
-	// Appel le fichier moduleFunction.js
-	lister(strRecherchee);
-	test();
+	lister(strRecherchee); //(moduleFunction.js)
+	validerTextbox();//(moduleFunction.js)
 });
 
-
-
 //========================================================================
-//  ZONE DE RECHERCHE: declenchée dès qu'il y a une entrée par le user.
+//  ZONE DE RECHERCHE: declenchée dès qu'il y a une entrée par l'user.
 //========================================================================
 $('#txtInput').keyup(()=>    
 {
@@ -49,13 +46,10 @@ $('#btnPlus').click(()=>
 	$("#ProfilNom").val("");
 });
 
-
-/*
-========================================================================
- BOUTON AJOUTER: Cette fonction est declenchée dès que le button btnAjouter
-  ...( from ajouter.php) du modal est appuyé.
-========================================================================
-*/
+//========================================================================
+// BOUTON AJOUTER: Cette fonction est declenchée dès que le button btnAjouter
+//  ...( from ajouter.php) du modal est appuyé.
+// ========================================================================
 $('#btnAjouter').click(()=>    
 {		
 	// Si true
@@ -99,37 +93,6 @@ $('#btnAjouter').click(()=>
 	}
 	//else{ console.log(validerChampsVide()); //to test	}	
 }); 
-
-
-//========================================================================
-// 
-//========================================================================
-function test()
-{
-	//For eatch INPUT TEXTBOX with class = estVide
-	$(".estVide").each(function()
-	{
-		//When textbox is empty
-		$(this).keyup(function()
-		{
-			if ($(this).val() == "" )
-			 {
-				$(this).removeClass("is-valid");
-				$(this).addClass("is-invalid");								
-			}	
-		});
-	});
-}
-
-function isItEmpty(texte)
-{
-	if($(texte).val().length >= 0)
-	{
-		console.log($(texte).val().length);//to test
-		 $(texte).removeClass("is-invalid"); 
-		 $(texte).addClass("is-valid");
-	}
-}
 
 //========================================================================
 //   Cette fonction est declenchée dès que le button btnSupprimer

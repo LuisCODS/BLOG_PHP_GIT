@@ -68,3 +68,38 @@ function validerChampsVide()
 	});
 	return reponse;
 }
+
+//========================================================================
+// Methode qui valide l'entrée de l'utilisateur.
+// Si le champs est vide, la couleur autours du textbox est à rouge.
+// Outrement, il est à vert.
+//========================================================================
+function validerTextbox()
+{
+	//For eatch INPUT TEXTBOX with class = estVide
+	$(".estVide").each(function()
+	{
+		//When textbox is empty
+		$(this).keyup(function()
+		{
+			if ($(this).val() == "" )
+			 {
+				$(this).removeClass("is-valid");
+				$(this).addClass("is-invalid");								
+			}	
+		});
+	});
+}
+
+//========================================================================
+// Methode qui 
+//========================================================================
+function isItEmpty(texte)
+{
+	if($(texte).val().length >= 0)
+	{
+		 //console.log($(texte).val().length);//to test
+		 $(texte).removeClass("is-invalid"); 
+		 $(texte).addClass("is-valid");
+	}
+}
