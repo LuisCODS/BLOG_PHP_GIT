@@ -16,8 +16,9 @@ $(()=>{
 });
 
 
+
 //========================================================================
-//  ZONE DE RECHERCHE: declenchée dès qu'il y a une entrée dans InputBusca.
+//  ZONE DE RECHERCHE: declenchée dès qu'il y a une entrée par le user.
 //========================================================================
 $('#txtInput').keyup(()=>    
 {
@@ -55,10 +56,12 @@ $('#btnPlus').click(()=>
 ========================================================================
 */
 $('#btnAjouter').click(()=>    
-{	
-	// Si la validation des champs du formulaire est réussi...
-	if( $("#ProfilNom").val() != "" ) 
+{		
+	// Si true
+	if(validerChampsVide() )
 	{
+		console.log(validerChampsVide());
+
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
 		//Get ID from profil
@@ -82,22 +85,61 @@ $('#btnAjouter').click(()=>
 				title: 'Attention!',
 				content: reponse,
 				buttons: {
-					Ok: ()=>{
+					Ok: ()=>{					
+						$('#ModalCadastro').modal('toggle');//close modal
 				         // Recharge la page actuelle à partir du 
-				         //... serveur, sans utiliser le cache.
-						// location.reload(true);
-						$('#ModalCadastro').modal('toggle');//close modal	
-						 lister(strRecherchee);						 
+				         //... serveur, sans utiliser le cache.		
+						location.reload(true);
+						// lister(strRecherchee);						 
 					}				
 				}
 			});		   
 		});
-	}else{
-		alert("Champs Oligatoire!");
-
+	}
+	else{
+		console.log(validerChampsVide());
+		//$(this).addClass("is-invalid");
+		//$("#ProfilNom").keyup(()=> {  $("#ProfilNom").addClass("is-invalid");  });
+		//alert("Champs Oligatoire!");//si false
+		//changeInputColor();
+		// $(this).keyup( $(this).addClass("is-valid") ); 
+	 // 	$(this).keydown( $(this).addClass("is-invalid") );
+	 
 	}	
 }); 
 
+
+//========================================================================
+// 
+//========================================================================
+$(document).ready(function()
+{
+	$(".estVide").each(function()
+	{
+		if ($(this).val() == "" )
+		{
+			$(this).addClass("is-invalid");
+			// $(this).keypress(function(){
+			// 	$(this).removeClass("estVide"); 
+			// 	$(this).addClass("is-valid"); 
+			// });
+		}
+		// else{
+		// 	$(this).addClass("is-valid");						
+		// }	
+	});
+});
+
+function isItEmpty(entree)
+{
+	$(entree).removeClass("is-invalid"); 
+	$(entree).addClass("is-valid");
+
+	$(entree).keydown(function(){
+		//$(entree).removeClass("estVide"); 
+		$(entree).addClass("is-invalid");
+	});
+}
 
 //========================================================================
 //   Cette fonction est declenchée dès que le button btnSupprimer

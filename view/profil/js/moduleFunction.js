@@ -51,24 +51,23 @@ function lister(txtInput)
 }
 
 
-//Valide la remplissage du formulaire
-// function validerChampsVide()
-// {
-// 	//pour chaque element qui a la class "estVide"
-// 	$(".estVide").each(function()
-// 	{
-// 		//Si le input value est vide
-// 		if( $(this).val() == "" ) {
-		//$("#ProfilNom").focus();	
-// 			//sett a new class
-// 			$(this).addClass("is-invalid");
-// 				return false;
-// 		}else{
-// 			//$(this).addClass("is-valid");
-// 				return true;
-// 		}
-// 	})
-// }
-	//Si textBox input is clean
-	//var champ = $("#ProfilNom").val();	
-	//Set class invalid
+function validerChampsVide()
+{
+	var chave = true;
+	//pour chaque element qui a la class "estVide"
+	$(".estVide").each(function()
+	{
+		//Si textbox n'est pas vide
+		if ($(this).val() != "" )
+		{
+			//$(this).addClass("is-valid"); 
+	    	chave = true;
+
+		}else{
+
+			//$(this).addClass("is-invalid");
+			chave = false;
+		}	
+	});
+	return chave;
+}
