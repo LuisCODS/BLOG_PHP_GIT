@@ -23,8 +23,7 @@
                          <input type="text" minlength="1" maxlength="50" 
                                 class="form-control estVide" id="ProfilNom" name="ProfilNom" 
                                 onkeypress="isItEmpty(this)"
-                                onkeydown="isClean(this)"
-                                required>                   
+                                equired>                   
                     </div>
             </form>            
         </div>

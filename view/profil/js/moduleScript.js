@@ -13,6 +13,7 @@ var strRecherchee = "";
 $(()=>{
 	// Appel le fichier moduleFunction.js
 	lister(strRecherchee);
+	test();
 });
 
 
@@ -60,7 +61,7 @@ $('#btnAjouter').click(()=>
 	// Si true
 	if(validerChampsVide() )
 	{
-		console.log(validerChampsVide());
+		//console.log(validerChampsVide()); //to test
 
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
@@ -96,49 +97,38 @@ $('#btnAjouter').click(()=>
 			});		   
 		});
 	}
-	else{
-		console.log(validerChampsVide());
-		//$(this).addClass("is-invalid");
-		//$("#ProfilNom").keyup(()=> {  $("#ProfilNom").addClass("is-invalid");  });
-		//alert("Champs Oligatoire!");//si false
-		//changeInputColor();
-		// $(this).keyup( $(this).addClass("is-valid") ); 
-	 // 	$(this).keydown( $(this).addClass("is-invalid") );
-	 
-	}	
+	//else{ console.log(validerChampsVide()); //to test	}	
 }); 
 
 
 //========================================================================
 // 
 //========================================================================
-$(document).ready(function()
+function test()
 {
+	//For eatch INPUT TEXTBOX with class = estVide
 	$(".estVide").each(function()
 	{
-		if ($(this).val() == "" )
+		//When textbox is empty
+		$(this).keyup(function()
 		{
-			$(this).addClass("is-invalid");
-			// $(this).keypress(function(){
-			// 	$(this).removeClass("estVide"); 
-			// 	$(this).addClass("is-valid"); 
-			// });
-		}
-		// else{
-		// 	$(this).addClass("is-valid");						
-		// }	
+			if ($(this).val() == "" )
+			 {
+				$(this).removeClass("is-valid");
+				$(this).addClass("is-invalid");								
+			}	
+		});
 	});
-});
+}
 
-function isItEmpty(entree)
+function isItEmpty(texte)
 {
-	$(entree).removeClass("is-invalid"); 
-	$(entree).addClass("is-valid");
-
-	$(entree).keydown(function(){
-		//$(entree).removeClass("estVide"); 
-		$(entree).addClass("is-invalid");
-	});
+	if($(texte).val().length >= 0)
+	{
+		console.log($(texte).val().length);//to test
+		 $(texte).removeClass("is-invalid"); 
+		 $(texte).addClass("is-valid");
+	}
 }
 
 //========================================================================

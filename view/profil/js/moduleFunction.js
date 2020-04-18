@@ -53,21 +53,18 @@ function lister(txtInput)
 
 function validerChampsVide()
 {
-	var chave = true;
-	//pour chaque element qui a la class "estVide"
+	var reponse = true;
+	//pour chaque INPUT qui a la class "estVide"
 	$(".estVide").each(function()
 	{
-		//Si textbox n'est pas vide
-		if ($(this).val() != "" )
-		{
-			//$(this).addClass("is-valid"); 
-	    	chave = true;
-
+		//Si l'input n'est pas vide
+		if ($(this).val() != "" ){
+			//$(entree).addClass("is-valid");	
+	    	reponse = true;
 		}else{
-
-			//$(this).addClass("is-invalid");
-			chave = false;
+			$(this).addClass("is-invalid");
+			reponse = false;
 		}	
 	});
-	return chave;
+	return reponse;
 }
