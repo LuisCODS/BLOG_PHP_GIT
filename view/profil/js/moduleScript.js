@@ -8,7 +8,7 @@ var strRecherchee = "";
 
 
 //========================================================================
-// All methods here i'll be call when page is loaded.
+// On page load...
 //========================================================================
 $(()=>{
 	lister(strRecherchee); //(moduleFunction.js)
@@ -38,10 +38,10 @@ $('#btnPlus').click(()=>
 	//Cache le boutton Supprimer par son ID: btnSupprimer
 	//on javascript sintax:  document.getElementById("btnSupprimer").hidden = true;
 	$("#btnSupprimer").css("display", "none");
-	//Ajoute la valeur du title h5 du modal
+	//Set title h5 au modal
 	$("#ModalTitle").html("Nouveau Pofil");
 
-	//Clean input from form
+	//Clean input  form
 	$("#Profil_ID").val("");
 	$("#ProfilNom").val("");
 });
@@ -53,9 +53,9 @@ $('#btnPlus').click(()=>
 $('#btnAjouter').click(()=>    
 {		
 	// Si true
-	if(validerChampsVide() )
+	if(validerTextboxInput() )
 	{
-		//console.log(validerChampsVide()); //to test
+		//console.log(validerTextboxInput()); //to test
 
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
@@ -91,7 +91,7 @@ $('#btnAjouter').click(()=>
 			});		   
 		});
 	}
-	//else{ console.log(validerChampsVide()); //to test	}	
+	//else{ console.log(validerTextboxInput()); //to test	}	
 }); 
 
 //========================================================================

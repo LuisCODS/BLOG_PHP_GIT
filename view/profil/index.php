@@ -1,5 +1,4 @@
 <?php include '../../includes/head.php'; ?>
-
     <div class="container-fluid">
         <!--  ICONE + TITLE -->
         <div class="row mb-3">
@@ -29,7 +28,6 @@
                <!-- CHARGE LE TEMPLATE ICI !-->
             </div>
         </div>
-    </div> 
-    
+    </div>     
 <?php include 'includes/ajouter.php'; ?>
 <?php include '../../includes/footer.php'; ?>

@@ -3,11 +3,10 @@
 // Methode qui retourn 2 champs(proprieté) du Profil.
 function lister(txtInput)
 {
-	//La valeur contenant dans action sera recuperée par 
-	//... (extract($_POST);) du côté (profil.php).
+	//Set la valeur à recuperer par(extract($_POST);) au controlleur(profil.php).
 	var actionType = 'action=getProfil';
 	//La valeur contenant dans txtInput sera recuperée  
-	//...par (extract($_POST);) du côté (profil.php).
+	//...par (extract($_POST);) dans le controlleur (profil.php).
 	var champs  = "txtInput="+txtInput;
 
 	//REQUISITION asynchrone 
@@ -51,7 +50,7 @@ function lister(txtInput)
 }
 
 
-function validerChampsVide()
+function validerTextboxInput()
 {
 	var reponse = true;
 	//pour chaque INPUT qui a la class "estVide"

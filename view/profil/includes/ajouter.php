@@ -10,7 +10,8 @@
                 <button type="button" 
                         class="close"
                         data-dismiss="modal" 
-                        aria-label="Close">
+                        aria-label="Close"
+                        onclick="location.reload(true);">
                         <span aria-hidden="true">&times;</span>
                 </button>
         </div>

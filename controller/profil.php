@@ -5,10 +5,10 @@
 	include '../model/Profil.class.php';
 	include '../dao/ProfilDAO.class.php';
 
-	// Get all form field(action/txtInput)
+	// Get data(action/txtInput) from moduleFunction.js
 	extract($_POST);
 
-	//Obj GLOBAL
+	//GLOBAL
 	$profilDAO = new ProfilDAO();	
 
 
