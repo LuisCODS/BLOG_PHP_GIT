@@ -11,19 +11,19 @@
            <form>
                 <div class="form-group">
                     <label for=""UtilisateurName>Nom</label>
-                    <input type="text" class="form-control" id="UtilisateurName" name="UtilisateurName">
+                    <input type="text" class="form-control" id="UtilisateurName" name="UtilisateurName" required>
                 </div>
                 <div class="form-group">
                     <label for=""UtilisateurNickName>Utilisateur</label>
-                    <input type="text" class="form-control" id="UtilisateurNickName" name="UtilisateurNickName">
+                    <input type="text" class="form-control" id="UtilisateurNickName" name="UtilisateurNickName" required>
                 </div>
                 <div class="form-group">
                     <label for="UtilisateurMDP">Mot de passe</label>
-                    <input type="password" autocomplete="on" class="form-control" id="UtilisateurMDP" name="UtilisateurMDP">
+                    <input type="password" autocomplete="on" class="form-control" id="UtilisateurMDP" name="UtilisateurMDP" required>
                 </div>
                 <div class="form-group">
                     <label for="UtilisateurEmail">Email</label>
-                    <input type="email" class="form-control" id="UtilisateurEmail" name="UtilisateurEmail">
+                    <input type="email" class="form-control" id="UtilisateurEmail" name="UtilisateurEmail" required>
                 </div>
                 <div class="form-group">
                     <label for="FK_ProfilID">Profil</label>

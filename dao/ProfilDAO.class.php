@@ -14,7 +14,7 @@
 
 	// ______________________________ CDRUD ___________________________
 
-		//AJOUTER
+		//Add a new Profil member
 		function insert(Profil $profil)
 		{
 			try {
@@ -28,6 +28,7 @@
 			}
 		}
 
+		// Update a current Profile member
 		function update(Profil $p)
 		{
 			try {
@@ -43,6 +44,7 @@
 				}
 		}
 
+		//Delete a current Profile member
 		function delete($Profil_ID)
 		{
 			try {
@@ -55,11 +57,11 @@
 			}
 		}
 
-		//Méthode qui fait une SELECT de 2 champs dans la BD.
-		//Retour: un tableau en format json.
+		// Method that returns a list of Profile in crescent order.
+		//Retour: tableau en format json.
 		function getProfil($txtInput)
 		{
-			$sql = "select Profil_ID, ProfilNom from profil WHERE ProfilNom like '%$txtInput%' ";
+			$sql = "select Profil_ID, ProfilNom from profil WHERE ProfilNom like '%$txtInput%'  ORDER BY ProfilNom ASC ";
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();//Return 1 si ok	
 			// Contient un array de Profil

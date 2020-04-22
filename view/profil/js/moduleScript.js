@@ -6,13 +6,12 @@
 var profilController ='../../controller/profil.php';
 var strRecherchee = "";
 
-
 //========================================================================
 // On page load...
 //========================================================================
 $(()=>{
 	lister(strRecherchee); //(moduleFunction.js)
-	validerTextbox();//(moduleFunction.js)
+	validerFormInputs();//(moduleFunction.js)
 });
 
 //========================================================================
@@ -26,9 +25,8 @@ $('#txtInput').keyup(()=>
 	lister(strRecherchee);
 });
 
-
 //========================================================================
-// BOUTON (+) :
+// BOUTON (+) : One a window to add a new Profil member.
 //========================================================================
 $('#btnPlus').click(()=>    
 {
@@ -44,6 +42,9 @@ $('#btnPlus').click(()=>
 	//Clean input  form
 	$("#Profil_ID").val("");
 	$("#ProfilNom").val("");
+
+	// $(".estVide").removeClass("is-invalid");
+	// $(".estVide").removeClass("is-valid");
 });
 
 //========================================================================
@@ -53,9 +54,9 @@ $('#btnPlus').click(()=>
 $('#btnAjouter').click(()=>    
 {		
 	// Si true
-	if(validerTextboxInput() )
+	if( validerEntreeVide() )
 	{
-		//console.log(validerTextboxInput()); //to test
+		//console.log(validerEntreeVide()); //to test
 
 		//get all form inputs  
 		var champs   = $("#formProfilAjouter").serialize();
@@ -75,7 +76,7 @@ $('#btnAjouter').click(()=>
 			var reponse = (msg == 1) ? "Enregistré avec sucess!" : msg;
 			//console.log(msg); to test
 
-			//Windos popup	
+			//Windos showup	
 			$.confirm({
 				title: 'Attention!',
 				content: reponse,
@@ -91,7 +92,7 @@ $('#btnAjouter').click(()=>
 			});		   
 		});
 	}
-	//else{ console.log(validerTextboxInput()); //to test	}	
+	//else{ console.log(validerEntreeVide()); //to test	}	
 }); 
 
 //========================================================================

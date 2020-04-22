@@ -1,6 +1,6 @@
-<!-- ______________________________________  BEGIN INCLUDE MODAL-AJOUTER   ______________________________________-->
-
-<div class="modal fade ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id='ModalCadastro'>
+<!-- _______________  BEGIN INCLUDE MODAL-AJOUTER   _________________-->
+<div class="modal fade ModalCadastro" tabindex="-1" role="dialog" 
+     aria-labelledby="myLargeModalLabel" aria-hidden="true" id='ModalCadastro'>
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">  
        <!--  MODAL HEAD -->
@@ -24,7 +24,11 @@
                          <input type="text" minlength="1" maxlength="50" 
                                 class="form-control estVide" id="ProfilNom" name="ProfilNom" 
                                 onkeypress="isItEmpty(this)"
-                                equired>                   
+                                required> 
+                               <!--  SHOW WHEN INPUT IS EMPTY  -->
+                                <div class="invalid-feedback">
+                                    Champs obligatoire!
+                               </div>                 
                     </div>
             </form>            
         </div>
@@ -46,5 +50,4 @@
     </div>
   </div>
 </div>
-
-<!-- ______________________________________  END INCLUDE MODAL-AJOUTER   ______________________________________-->
+<!-- ______________  END INCLUDE MODAL-AJOUTER   ______________-->

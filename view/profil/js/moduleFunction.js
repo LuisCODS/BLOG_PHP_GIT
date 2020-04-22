@@ -49,16 +49,19 @@ function lister(txtInput)
 	});
 }
 
-
-function validerTextboxInput()
+//========================================================================
+// Methode qui valide if textbox input is empty.Return true/false.
+// If false, set a new class for textbox input.
+//========================================================================
+function validerEntreeVide()
 {
 	var reponse = true;
+
 	//pour chaque INPUT qui a la class "estVide"
 	$(".estVide").each(function()
 	{
-		//Si l'input n'est pas vide
+		//If input isen't clean
 		if ($(this).val() != "" ){
-			//$(entree).addClass("is-valid");	
 	    	reponse = true;
 		}else{
 			$(this).addClass("is-invalid");
@@ -73,16 +76,18 @@ function validerTextboxInput()
 // Si le champs est vide, la couleur autours du textbox est à rouge.
 // Outrement, il est à vert.
 //========================================================================
-function validerTextbox()
+function validerFormInputs()
 {
 	//For eatch INPUT TEXTBOX with class = estVide
 	$(".estVide").each(function()
 	{
-		//When textbox is empty
+		//lorsque l'utilisateur relâche une clé
 		$(this).keyup(function()
 		{
+			//Si textbox is empty
 			if ($(this).val() == "" )
 			 {
+			 	//switch class...
 				$(this).removeClass("is-valid");
 				$(this).addClass("is-invalid");								
 			}	
