@@ -1,5 +1,4 @@
 
-
 // Methode qui retourne l'ensemble des entités.
 function lister(txtInput)
 {
@@ -115,8 +114,32 @@ function isItEmpty(texte)
 	}
 }
 
-listerProfil()
-function 
+
+//Methode qui charge les Profil dans la zone select dans la page Utilisateur.
+function listerProfil()
 {
-	
+	var action = 'action=getProfil';
+	var champs  = "txtInput=";
+
+	//REQUISITION asynchrone 
+	$.ajax({
+		method:'POST', 
+		url: profilController,
+		data: action+'&'+champs
+		//CALLBACK: un array de profil en format json.
+	}).done((jsonData)=>{			
+		//  REQUISITION asynchrone
+		$.ajax({
+			method:'POST', 
+			url: 'template/list-profil.php',
+			//le callback jsonData est envoyée par la variable obj
+			data: "obj="+jsonData
+		//CALLBACK: tout le contenu du fichier table-profil.php	
+		}).done((template)=>{
+			//Charge le template, provenant du callback, dans la div 
+			//... listTemplate avec son id,  dans (index.php) du profil.
+			$("#Profil_ID").html(template);
+		});
+
+	});	
 }

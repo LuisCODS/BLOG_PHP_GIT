@@ -4,6 +4,8 @@
 
 //  PORTÉE GLOBAL 
 var UserController ='../../controller/utilisateur.php';
+//necessaire pour charger le select dans la page Utilisateur.
+var profilController ='../../controller/profil.php';
 var strRecherchee = "";
 
 //========================================================================
@@ -12,7 +14,7 @@ var strRecherchee = "";
 $(()=>{
 	lister(strRecherchee); //(moduleFunction.js)
 	validerFormInputs();//(moduleFunction.js)
-	listerProfil(); //(moduleFunction.js)
+	listerProfil(); //Charge les option dans la selection de la page Utilisateur(moduleFunction.js)
 });
 
 //========================================================================

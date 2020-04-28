@@ -6,7 +6,7 @@
 <?php extract($_POST); ?>
  
 <?php foreach( json_decode($obj) as $list) { ?>						  
-  <option value="<?php echo $list->UtilisateurName;?>"> <?php echo $list->UtilisateurName; ?> </option>  		
+  <option value="<?php echo $list->Profil_ID;?>"> <?php echo $list->ProfilNom; ?> </option>  		
 <?php } ?>	
 
 
