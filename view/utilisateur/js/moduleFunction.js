@@ -114,3 +114,9 @@ function isItEmpty(texte)
 		 $(texte).addClass("is-valid");
 	}
 }
+
+listerProfil()
+function 
+{
+	
+}

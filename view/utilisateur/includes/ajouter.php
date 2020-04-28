@@ -63,9 +63,7 @@
                 <div class="form-group">
                     <label for="Profil_ID">Profil</label>
                     <select class="form-control estVide" id="Profil_ID" name="Profil_ID" required>
-                        <option value="">Selection</option>
-                        <option value="1">Admin</option>
-                        <option value="2">Lecteur</option>
+                       <!--  REBDER PAGE(TAMPLATE) HERE -->
                     </select>
                         <!--  SHOW WHEN INPUT IS EMPTY  -->
                         <div class="invalid-feedback">

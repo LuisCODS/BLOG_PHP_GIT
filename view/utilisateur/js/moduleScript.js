@@ -12,6 +12,7 @@ var strRecherchee = "";
 $(()=>{
 	lister(strRecherchee); //(moduleFunction.js)
 	validerFormInputs();//(moduleFunction.js)
+	listerProfil(); //(moduleFunction.js)
 });
 
 //========================================================================
