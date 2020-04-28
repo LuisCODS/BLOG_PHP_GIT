@@ -6,7 +6,7 @@
 <table class="table table-hover">
 	<thead class="thead-dark">
 	    <tr>
-	        <th>Niveau</th>
+	        <th>Nom</th>
 	        <th>Action</th>
 	    </tr>
 	</thead>
