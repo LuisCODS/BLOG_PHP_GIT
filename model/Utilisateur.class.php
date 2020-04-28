@@ -21,6 +21,8 @@
 			$this->UtilisateurEmail	     = $UtilisateurEmail;
 		}
 
+		
+
 		function getUtilisateurID(){
 			return $this->Utilisateur_ID;
 		}

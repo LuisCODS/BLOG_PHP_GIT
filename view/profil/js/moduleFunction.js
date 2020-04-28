@@ -96,7 +96,10 @@ function validerFormInputs()
 }
 
 //========================================================================
-// Methode qui 
+// Method that changes color of form input.
+// It's Called in each input field of form:
+// When input field is empty the red color is shown, 
+//... once the field is fill, green color appear.
 //========================================================================
 function isItEmpty(texte)
 {

@@ -1,53 +1,33 @@
-<!--  HEAD  -->  
-<?php include '../../includes/head.php'; ?> 
-
-<!-- _________________ RENDER PAGE - UTILISATEUR ICI _________________-->
-
-<div class="container-fluid">
-    <div class="row mb-3">
-        <div class="col-md-11">
-           <h2><i class="fas fa-users"></i> Utilisateurs</h2> 
-        </div>   
-        <div class="col-md-1">
-           <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ModalCadastro"><i class="fas fa-plus"></i> </button>
-        </div>        
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Maria</td>
-                        <td>Otto@gmail.com</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                    <tr>
-                        <td>Joao</td>
-                        <td>Joao@gmail.com</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                    <tr>
-                        <td>ben</td>
-                        <td>ben@gmail.com</td>
-                        <td><button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i> Editer</button></td>
-                    </tr>
-                </tbody>
-            </table>
+<?php include '../../includes/head.php'; ?>
+    <div class="container-fluid">
+        <!--  ICONE + TITLE -->
+        <div class="row mb-3">
+            <div class="col-md-8">
+               <h2><i class="far fa-address-card"></i> Utilisateur</h2> 
+            </div>   
+            <!--  ZONE RECHERCHE -->         
+            <div class="col-md-3">
+                   <input type="text" 
+                          id="txtInput" 
+                          name="" 
+                          value="" 
+                          class="form-control" 
+                          placeholder="Qui cherchez vous?"> 
+            </div> 
+            <!--  BOUTTON + -->
+            <div class="col-md-1">
+                <button type="button"
+                        class="btn btn-primary float-right" 
+                        id="btnPlus" ><i class="fas fa-plus"></i> 
+                </button>
+            </div>        
+        </div>       
+        <!--  RENDER PAGE --> 
+        <div class="row">
+            <div class="col-md-12" id="listTemplate">
+               <!-- CHARGE LE TEMPLATE ICI !-->
+            </div>
         </div>
-    </div>
-</div> 
-<!-- __________________________ FIN RENDER PAGE ________________________-->
-
-
-<!--  MODAL: POUR LE BUTTON -->
+    </div>     
 <?php include 'includes/ajouter.php'; ?>
-
-<!--  - LAYOUT -->
 <?php include '../../includes/footer.php'; ?>

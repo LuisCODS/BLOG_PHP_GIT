@@ -21,7 +21,7 @@
 					$profilNom = $profil->getProfilNom();
 					$sql = 'insert into profil(ProfilNom) values(?)';
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $profilNom);
+					$stmt->bindValue(1, $profilNom);
 					return $stmt->execute();//Return true/False	
 			} catch (PDOException $e) {
 				echo 'Erreur insertion: '. $e;
@@ -34,10 +34,12 @@
 			try {
 					$profilNom = $p->getProfilNom();
 					$ProfilID = $p->getProfilID();
+
 					$sql = 'update profil set ProfilNom = ? where Profil_ID = ? ';
+					
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $profilNom );
-					$stmt->bindParam(2, $ProfilID);					
+					$stmt->bindValue(1, $profilNom );
+					$stmt->bindValue(2, $ProfilID);					
 					return $stmt->execute();//Return true/False						
 				} catch (PDOException $e) {
 					echo "Erro: ". $e;
@@ -50,7 +52,7 @@
 			try {
 					$sql = 'delete from profil where Profil_ID = ? ';
 					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $Profil_ID);					
+					$stmt->bindValue(1, $Profil_ID);					
 					return $stmt->execute();//Return true/False					
 			} catch (PDOException $e) {
 				echo "Erro: ". $e;

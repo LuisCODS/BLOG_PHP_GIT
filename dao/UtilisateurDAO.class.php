@@ -16,27 +16,21 @@ include'../includes/Connection.class.php';
 		function insert(Utilisateur $user)
 		{
 			try {
-					$Profil_ID 		 	  = $user->getProfilID();
-					$UtilisateurName 	  = $user->getUtilisateurName();
-					$UtilisateurNickName  = $user->getUtilisateurNickName();
-					$UtilisateurMDP 	  = $user->getUtilisateurMDP();
-					$UtilisateurEmail 	  = $user->getUtilisateurEmail();
-
 					$sql = 'insert into utilisateur 
 							(Profil_ID,
 							 UtilisateurName,
 							 UtilisateurNickName,
 							 UtilisateurMDP,
 							 UtilisateurEmail)
-							 values(?,?,?,?,?,?)';
+							 values(?,?,?,?,?)';
 
 					$stmt = $this->cn->prepare($sql);
 
-					$stmt->bindParam(1, $Profil_ID);
-					$stmt->bindParam(2, $UtilisateurName);
-					$stmt->bindParam(3, $UtilisateurNickName);
-					$stmt->bindParam(4, $UtilisateurMDP);
-					$stmt->bindParam(5, $UtilisateurEmail );
+					$stmt->bindValue(1, $user->getProfilID() );
+					$stmt->bindValue(2, $user->getUtilisateurName() );
+					$stmt->bindValue(3, $user->getUtilisateurNickName() );
+					$stmt->bindValue(4, $user->getUtilisateurMDP() );
+					$stmt->bindValue(5, $user->getUtilisateurEmail() );
 
 					return $stmt->execute();
 
@@ -48,76 +42,63 @@ include'../includes/Connection.class.php';
 		function upDate(Utilisateur $user)
 		{
 			try {
-					
-					$Profil_ID 		 	  = $user->getProfilID();
-					$UtilisateurName 	  = $user->getUtilisateurName();
-					$UtilisateurNickName  = $user->getUtilisateurNickName();
-					$UtilisateurMDP 	  = $user->getUtilisateurMDP();
-					$UtilisateurEmail 	  = $user->getUtilisateurEmail();
-					$Utilisateur_ID  	  = $user->getUtilisateurID();
-
 				   $sql =  'update utilisateur set
 							Profil_ID = ?,
 							UtilisateurName = ?,
 							UtilisateurNickName = ?,
 							UtilisateurMDP = ?,
-							UtilisateurEmail = ?,
-							Utilisateur_ID = ?
+							UtilisateurEmail = ?							
 							where Utilisateur_ID = ?';
 
 					$stmt = $this->cn->prepare($sql);
 
-					$stmt->bindParam(1, $Profil_ID);
-					$stmt->bindParam(2, $UtilisateurName);
-					$stmt->bindParam(3, $UtilisateurNickName);
-					$stmt->bindParam(4, $UtilisateurMDP);
-					$stmt->bindParam(5, $UtilisateurEmail);
-					$stmt->bindParam(6, $Utilisateur_ID);
+					$stmt->bindValue(1, $user->getProfilID() );
+					$stmt->bindValue(2, $user->getUtilisateurName() );
+					$stmt->bindValue(3, $user->getUtilisateurNickName());
+					$stmt->bindValue(4, $user->getUtilisateurMDP());
+					$stmt->bindValue(5, $user->getUtilisateurEmail());
+					$stmt->bindValue(6, $user->getUtilisateurID() );
 
 					return $stmt->execute();
 
-			} catch (PDOException $e) {
-				echo "Erro: ". $eCommentaire;
-			}
-		}
-
-		function delete($Utilisateur_ID)
-		{
-			try {
-					$sql = 'delete from utilisateur 
-							where Utilisateur_ID = ? ';
-					$stmt = $this->cn->prepare($sql);
-					$stmt->bindParam(1, $Post_ID);
-					return $stmt->execute();					
 			} catch (PDOException $e) {
 				echo "Erro: ". $e;
 			}
 		}
 
-		function getUtilisateur()
+		function delete($user_ID)
+		{			
+			try {
+					$sql = 'delete from utilisateur 
+							where Utilisateur_ID = ? ';
+					$stmt = $this->cn->prepare($sql);
+					$stmt->bindValue(1, $user_ID);
+					return $stmt->execute();	
+
+			} catch (PDOException $e) {
+				echo "Erro: ". $e;
+			}
+		}
+
+		function getUtilisateur($txtInput)
 		{
-			$sql = 'select
+			$sql = "select
 					Utilisateur_ID, 
 					Profil_ID,
 					UtilisateurName, 
-				    UtilisateurNickName,
-				    UtilisateurMDP,
-				    UtilisateurEmail
-				    from utilisateur';
+					UtilisateurNickName,
+					UtilisateurMDP,	
+					UtilisateurEmail			
+				    from utilisateur
+				    WHERE UtilisateurName like '%$txtInput%'  
+				    ORDER BY UtilisateurName ASC  ";
 
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
 			//pega o resutado da consulta
-			$rs = $stmt->fetchall(PDO::FETCH_ASSOC); 
-			 return $rs ;
+			$rs = $stmt->fetchall(PDO::FETCH_ASSOC);  			
+			 return json_encode($rs);//Retourn un array en json
 		}
-
-
-
-
-
-
-
 		
 	}
 

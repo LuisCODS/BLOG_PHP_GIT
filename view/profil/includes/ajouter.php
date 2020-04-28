@@ -17,7 +17,7 @@
         </div>
         <!--  MODAL BODY -->
         <div class="modal-body">
-           <form id="formProfilAjouter">
+           <form id="formAjouter">
                 <input type="hidden" id="Profil_ID" name="Profil_ID" readonly="true" >
                     <div class="form-group">
                         <label for="ProfilNom">Nom</label>

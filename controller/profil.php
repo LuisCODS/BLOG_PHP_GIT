@@ -15,6 +15,9 @@
 	switch ($action) 
 	{
 		case 'insert':
+			// removes whitespace from both sides of a string
+			//var $strNoWhiteSpace = $ProfilNom.trim();
+
 			$newProfil = new Profil(null, $ProfilNom);		
 			echo $profilDAO->insert($newProfil);//Si ok return 1
 		    break;

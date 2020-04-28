@@ -83,7 +83,8 @@ include'../includes/Connection.class.php';
 			$stmt->execute();
 			//pega o resutado da consulta
 			$rs = $stmt->fetchall(PDO::FETCH_ASSOC); 
-			 return $rs ;
+ 			//Retourn un array en json,car HTML(browser) only ready string.
+			 return json_encode($rs);
 		}
 	}
 

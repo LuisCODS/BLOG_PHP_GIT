@@ -7,7 +7,7 @@ var profilController ='../../controller/profil.php';
 var strRecherchee = "";
 
 //========================================================================
-// On page load...
+// Things that should be done every time a page loads
 //========================================================================
 $(()=>{
 	lister(strRecherchee); //(moduleFunction.js)
@@ -33,18 +33,15 @@ $('#btnPlus').click(()=>
 	//Open the modal windows
 	$('.ModalCadastro').modal("show");	
 
-	//Cache le boutton Supprimer par son ID: btnSupprimer
+	//Cache le boutton Supprimer du modal
 	//on javascript sintax:  document.getElementById("btnSupprimer").hidden = true;
 	$("#btnSupprimer").css("display", "none");
 	//Set title h5 au modal
 	$("#ModalTitle").html("Nouveau Pofil");
 
-	//Clean input  form
+	//Clean input  filds
 	$("#Profil_ID").val("");
 	$("#ProfilNom").val("");
-
-	// $(".estVide").removeClass("is-invalid");
-	// $(".estVide").removeClass("is-valid");
 });
 
 //========================================================================
@@ -59,7 +56,7 @@ $('#btnAjouter').click(()=>
 		//console.log(validerEntreeVide()); //to test
 
 		//get all form inputs  
-		var champs   = $("#formProfilAjouter").serialize();
+		var champs   = $("#formAjouter").serialize();
 		//Get ID from profil
 		var Profil_ID = $("#Profil_ID").val();	
 		//Si le champ est vide, action = insert, sinon action = update
@@ -102,7 +99,7 @@ $('#btnAjouter').click(()=>
 $('#btnSupprimer').click(()=>    
 {	
 	//get all inputs from form (Profil_ID et ProfilNom )
-	var champs   = $("#formProfilAjouter").serialize();
+	var champs   = $("#formAjouter").serialize();
 	var actionType = 'action=delete';
 
 	// REQUISITION asynchrone 

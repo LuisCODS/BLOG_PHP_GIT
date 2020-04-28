@@ -12,6 +12,8 @@ Class Profil
 		$this->ProfilNom   = $ProfilNom;
 	}
 
+
+
 	function getProfilID(){
 		return $this->Profil_ID;
 	}
