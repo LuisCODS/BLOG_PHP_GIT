@@ -18,28 +18,48 @@
         <!--  MODAL BODY -->
         <div class="modal-body">
            <form id="formAjouter">
+
                 <input type="hidden" id="Utilisateur_ID" name="Utilisateur_ID" readonly="true" >
+
                 <div class="form-group">
-                    <label for=""UtilisateurName>Nom</label>
-                    <input type="text" class="form-control estVide" 
-                            id="UtilisateurName" name="UtilisateurName" 
-                            onkeypress="isItEmpty(this)" required>
+                        <label for=""UtilisateurName>Nom</label>
+                        <input type="text" class="form-control estVide" id="UtilisateurName" name="UtilisateurName" onkeypress="isItEmpty(this)" required>
+                       <!--  SHOW WHEN INPUT IS EMPTY  -->
+                        <div class="invalid-feedback">
+                            Champs obligatoire!
+                       </div>
                 </div>
+
                 <div class="form-group">
-                    <label for=""UtilisateurNickName>Utilisateur</label>
-                    <input type="text" class="form-control estVide" id="UtilisateurNickName" 
-                           name="UtilisateurNickName" onkeypress="isItEmpty(this)" required>
+                        <label for=""UtilisateurNickName>Utilisateur</label>
+                        <input type="text" class="form-control estVide" id="UtilisateurNickName" 
+                               name="UtilisateurNickName" onkeypress="isItEmpty(this)" required>
+                       <!--  SHOW WHEN INPUT IS EMPTY  -->
+                        <div class="invalid-feedback">
+                            Champs obligatoire!
+                       </div>                           
                 </div>
+
                 <div class="form-group">
-                    <label for="UtilisateurMDP">Mot de passe</label>
-                    <input type="password" autocomplete="on" class="form-control estVide" 
-                           id="UtilisateurMDP" name="UtilisateurMDP" onkeypress="isItEmpty(this)" required>
+                        <label for="UtilisateurMDP">Mot de passe</label>
+                        <input type="password" autocomplete="on" class="form-control estVide" 
+                               id="UtilisateurMDP" name="UtilisateurMDP" onkeypress="isItEmpty(this)" required>
+                       <!--  SHOW WHEN INPUT IS EMPTY  -->
+                        <div class="invalid-feedback">
+                            Champs obligatoire!
+                       </div>                           
                 </div>
+
                 <div class="form-group">
-                    <label for="UtilisateurEmail">Email</label>
-                    <input type="email" class="form-control estVide" 
-                           id="UtilisateurEmail" name="UtilisateurEmail" onkeypress="isItEmpty(this)" required>
+                        <label for="UtilisateurEmail">Email</label>
+                        <input type="email" class="form-control estVide" 
+                               id="UtilisateurEmail" name="UtilisateurEmail" onkeypress="isItEmpty(this)" required>
+                        <!--  SHOW WHEN INPUT IS EMPTY  -->
+                        <div class="invalid-feedback">
+                            Champs obligatoire!
+                       </div>
                 </div>
+
                 <div class="form-group">
                     <label for="Profil_ID">Profil</label>
                     <select class="form-control estVide" id="Profil_ID" name="Profil_ID" required>
@@ -47,7 +67,12 @@
                         <option value="1">Admin</option>
                         <option value="2">Lecteur</option>
                     </select>
+                        <!--  SHOW WHEN INPUT IS EMPTY  -->
+                        <div class="invalid-feedback">
+                            Champs obligatoire!
+                       </div>
                 </div>
+
             </form>            
         </div>
         <!--  MODAL FOOTER -->

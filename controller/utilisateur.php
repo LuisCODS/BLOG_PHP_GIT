@@ -25,7 +25,6 @@
 			break;
 
 		case 'delete':
-				//$user = new Utilisateur($Utilisateur_ID,$Profil_ID,$UtilisateurName,$UtilisateurNickName,$UtilisateurMDP,$UtilisateurEmail);	
 				echo $utilisateurDAO->delete($Utilisateur_ID);//Si ok return 1
 			break;
 

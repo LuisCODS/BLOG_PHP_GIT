@@ -103,6 +103,10 @@ function validerFormInputs()
 //========================================================================
 function isItEmpty(texte)
 {
+	var size = $(texte).val()  ;
+	console.log(size.length);
+	//$("#Profil_ID").val(obj.Profil_ID);
+
 	if($(texte).val().length >= 0)
 	{
 		 //console.log($(texte).val().length);//to test
