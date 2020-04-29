@@ -1,4 +1,9 @@
 
+//  ____________________________________________________________________
+//  PAGE QUI FOURNIE LES FUNCTIONS DE SUPPORT AU FICHIER moduleScript.js
+// ____________________________________________________________________
+
+
 
 // Methode qui retourn 2 champs(proprieté) du Profil.
 function lister(txtInput)
