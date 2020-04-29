@@ -40,3 +40,7 @@
 	</tbody>
 </table>
 
+<!--  --------------------------------------------------------------------
+  CETTE PAGE RECOIT LA  REQUISITION ASSINCRONE AJAX (moduleScript.js) 
+ ... POUR AFFICHER UNE LIST DE PROFIL.
+ --------------------------------------------------------------------- -->
