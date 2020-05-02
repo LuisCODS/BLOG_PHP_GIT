@@ -60,7 +60,7 @@ function lister(txtInput)
 //========================================================================
 function validerEntreeVide()
 {
-	var reponse = true;
+	var reponse = "";
 
 	//pour chaque INPUT qui a la class "estVide"
 	$(".estVide").each(function()

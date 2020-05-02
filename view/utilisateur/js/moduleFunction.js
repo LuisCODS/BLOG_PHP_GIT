@@ -1,3 +1,9 @@
+//  _____________________________________________________________________
+//  PAGE QUI FOURNIE LES METHODES DE SUPPORT AU FICHIER moduleScript.jS
+// _____________________________________________________________________
+
+
+
 
 // Methode qui retourne l'ensemble des entités.
 function lister(txtInput)
@@ -58,26 +64,30 @@ function lister(txtInput)
 //========================================================================
 function validerEntreeVide()
 {
-	var reponse = true;
+	var reponse = "";
 
 	//pour chaque INPUT qui a la class "estVide"
 	$(".estVide").each(function()
 	{
-		//If input isen't clean
-		if ($(this).val() != "" ){
+		//If input isen't empty
+		if ($(this).val() != "" )
+		{
 	    	reponse = true;
 		}else{
 			$(this).addClass("is-invalid");
 			reponse = false;
 		}	
 	});
+	// Prevent registration form if textbox is empty
+	if ($(".is-invalid").length>0){
+		reponse = false;
+	}
 	return reponse;
 }
 
 //========================================================================
-// Methode qui valide l'entrée de l'utilisateur.
-// Si le champs est vide, la couleur autours du textbox est à rouge.
-// Outrement, il est à vert.
+// Methode qui valide les textbox. Si le champs est vide, la couleur 
+// ...autours du textbox est à rouge. Outrement, il est à vert.
 //========================================================================
 function validerFormInputs()
 {
@@ -95,7 +105,14 @@ function validerFormInputs()
 				$(this).addClass("is-invalid");								
 			}	
 		});
+		//When un option is selected
+		$( ".estVide" ).change(function() {
+			$(this).removeClass("is-invalid");
+		  	$(this).addClass("is-valid");	
+		});
 	});
+
+
 }
 
 //========================================================================

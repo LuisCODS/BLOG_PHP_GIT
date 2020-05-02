@@ -1,12 +1,18 @@
-//  ------------------------------------------------------------------
+//  _____________________________________________________________________
 //  PAGE  RESPONSABLE POUR ELABORER LES REQUISITIONS AJAX ASYNCHRONES.
-// -------------------------------------------------------------------
+// _____________________________________________________________________
 
 //  PORTÉE GLOBAL 
 var UserController ='../../controller/utilisateur.php';
 //necessaire pour charger le select dans la page Utilisateur.
 var profilController ='../../controller/profil.php';
 var strRecherchee = "";
+
+
+
+
+
+
 
 //========================================================================
 // Things that should be done every time a page loads
@@ -55,8 +61,8 @@ $('#btnPlus').click(()=>
 });
 
 //========================================================================
-// BOUTON AJOUTER: Cette fonction est declenchée dès que le button btnAjouter
-//  ...( from ajouter.php) du modal est appuyé.
+// BOUTON AJOUTER: Cette fonction est declenchée dès que le button 
+//  ... btnAjouter du fichier (ajouter.php) du modal est appuyé.
 // ========================================================================
 $('#btnAjouter').click(()=>    
 {		
@@ -99,7 +105,7 @@ $('#btnAjouter').click(()=>
 			});		   
 		});
 	}
-	//else{ console.log(validerEntreeVide()); //to test	}	
+	
 }); 
 
 //========================================================================
