@@ -25,9 +25,7 @@
                         <label for=""UtilisateurName>Nom</label>
                         <input type="text" class="form-control estVide" id="UtilisateurName" name="UtilisateurName" onkeypress="isItEmpty(this)" required>
                        <!--  SHOW WHEN INPUT IS EMPTY  -->
-                        <div class="invalid-feedback">
-                            Champs obligatoire!
-                       </div>
+                        <div class="invalid-feedback"> Champs obligatoire!</div>
                 </div>
 
                 <div class="form-group">
@@ -35,9 +33,7 @@
                         <input type="text" class="form-control estVide" id="UtilisateurNickName" 
                                name="UtilisateurNickName" onkeypress="isItEmpty(this)" required>
                        <!--  SHOW WHEN INPUT IS EMPTY  -->
-                        <div class="invalid-feedback">
-                            Champs obligatoire!
-                       </div>                           
+                        <div class="invalid-feedback">Champs obligatoire!</div>                           
                 </div>
 
                 <div class="form-group">
@@ -45,9 +41,7 @@
                         <input type="password" autocomplete="on" class="form-control estVide" 
                                id="UtilisateurMDP" name="UtilisateurMDP" onkeypress="isItEmpty(this)" required>
                        <!--  SHOW WHEN INPUT IS EMPTY  -->
-                        <div class="invalid-feedback">
-                            Champs obligatoire!
-                       </div>                           
+                       <div class="invalid-feedback">Champs obligatoire!</div>                        
                 </div>
 
                 <div class="form-group">
@@ -55,9 +49,7 @@
                         <input type="email" class="form-control estVide" 
                                id="UtilisateurEmail" name="UtilisateurEmail" onkeypress="isItEmpty(this)" required>
                         <!--  SHOW WHEN INPUT IS EMPTY  -->
-                        <div class="invalid-feedback">
-                            Champs obligatoire!
-                       </div>
+                        <div class="invalid-feedback">Champs obligatoire!</div>  
                 </div>
 
                 <div class="form-group">
@@ -66,9 +58,7 @@
                        <!--  REBDER PAGE(TAMPLATE) HERE -->
                     </select>
                         <!--  SHOW WHEN INPUT IS EMPTY  -->
-                        <div class="invalid-feedback">
-                            Champs obligatoire!
-                       </div>
+                        <div class="invalid-feedback">Champs obligatoire!</div>  
                 </div>
 
             </form>            
