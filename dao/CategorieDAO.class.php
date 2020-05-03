@@ -1,3 +1,10 @@
+<!-- 
+ ____________________________________________________________________________
+L'objectif de ce module est de réaliser les scripts pour accéder à la base de données.Le DAO donne accès aux données des entités: pour chaque classe il y aura un DAO.
+ ____________________________________________________________________________ 
+-->
+
+
 <?php
 include'../includes/Connection.class.php';
 
@@ -60,9 +67,9 @@ include'../includes/Connection.class.php';
 			}
 		}
 
-		function getCategorie()
+		function getCategorie($txtInput)
 		{
-			$sql = 'select Categorie_ID, NomCategorie  from categorie';
+			$sql = "select Categorie_ID, NomCategorie  from categorie WHERE NomCategorie like '%$txtInput%'  ORDER BY NomCategorie ASC";
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
 			//pega o resutado da consulta

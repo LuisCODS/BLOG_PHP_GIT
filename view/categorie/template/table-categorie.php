@@ -1,43 +1,37 @@
 <!--
  ____________________________________________________________________
   CETTE PAGE RECOIT LA  REQUISITION ASSINCRONE AJAX (moduleScript.js) 
- ... POUR AFFICHER UNE LIST DE PROFIL.
+ ... POUR AFFICHER UNE LIST DE CATEGORIE.
  ____________________________________________________________________
  -->
+
+<!--recupere la variable obj(tableau json de la  categorie) 
+du callback(moduleScript.js)  -->
+
+<?php extract($_POST);?>
 
 <table class="table table-hover">
 	<thead class="thead-dark">
 	    <tr>
-	        <th>Niveau</th>
+	        <th>Titre</th>
 	        <th>Action</th>
 	    </tr>
 	</thead>
-	<tbody>
-
-<?php
-	//recupere la variable obj(tableau json du profil) 
-	//du callback(moduleScript.js) 
-	extract($_POST);
-	//Decodes a JSON string into a PHP objet
-	foreach( json_decode($obj) as $profil)	
-	{
-?>			
+	<tbody>	
+	<!-- Decodes a JSON string into a PHP objet -->	
+	<?php foreach(json_decode($obj) as $list) { ?>			
 	    <tr>
-	        <td><?php echo $profil->ProfilNom ?></td>
+	        <td><?php echo $list->NomCategorie; ?></td>
 	        <td>
 	        	<button type="button" 
 	        			class="btn btn-dark btnEditer" 
-	        			obj='<?php echo json_encode($profil); ?>'>
+	        			obj='<?php echo json_encode($list); ?>'>
 	        			<i class="fas fa-user-edit"></i>
 	        		 Editer
 	       		 </button>
 	        </td>
-	    </tr> 
-
-<?php
-	}
-
-?>
-
+	    </tr>
+	<?php } ?>
 	</tbody>
 </table>
+
