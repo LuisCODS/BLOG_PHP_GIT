@@ -69,7 +69,7 @@ include'../includes/Connection.class.php';
 
 		function getCategorie($txtInput)
 		{
-			$sql = "select Categorie_ID, NomCategorie  from categorie WHERE NomCategorie like '%$txtInput%'  ORDER BY NomCategorie ASC";
+			$sql = "select Categorie_ID, NomCategorie  from categorie WHERE NomCategorie like '%$txtInput%' ";
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
 			//pega o resutado da consulta

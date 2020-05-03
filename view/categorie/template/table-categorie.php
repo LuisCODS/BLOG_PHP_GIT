@@ -17,21 +17,22 @@ du callback(moduleScript.js)  -->
 	        <th>Action</th>
 	    </tr>
 	</thead>
-	<tbody>	
-	<!-- Decodes a JSON string into a PHP objet -->	
-	<?php foreach(json_decode($obj) as $list) { ?>			
-	    <tr>
-	        <td><?php echo $list->NomCategorie; ?></td>
-	        <td>
-	        	<button type="button" 
-	        			class="btn btn-dark btnEditer" 
-	        			obj='<?php echo json_encode($list); ?>'>
-	        			<i class="fas fa-user-edit"></i>
-	        		 Editer
-	       		 </button>
-	        </td>
-	    </tr>
-	<?php } ?>
+	<tbody>	 
+		<?php foreach(json_decode($obj) as $list) { ?>			
+		    <tr>
+		        <td><?php echo $list->NomCategorie; ?></td>
+		        <td>
+		        	<button type="button" 
+		        			class="btn btn-dark btnEditer" 
+		        			obj='<?php echo json_encode($list); ?>'>
+		        			<i class="fas fa-user-edit"></i>
+		        		 Editer
+		       		 </button>
+		        </td>
+		    </tr>
 	</tbody>
 </table>
+	<?php } ?>
+	
+
 
