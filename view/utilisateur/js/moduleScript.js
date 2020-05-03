@@ -39,8 +39,6 @@ $('#txtInput').keyup(()=>
 //========================================================================
 $('#btnPlus').click(()=>    
 {
-	
-	
 	//Open the modal windows
 	$('.ModalCadastro').modal("show");	
 
