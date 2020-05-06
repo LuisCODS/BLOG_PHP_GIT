@@ -5,13 +5,13 @@
 
 
 
-// Methode qui retourn 2 champs(proprieté) d'une Categorie.
+// Methode qui retourn 2 champs(proprieté) du categorie.
 function lister(txtInput)
 {
-	//Set la valeur à recuperer par(extract($_POST);) au controlleur
+	//Set la valeur à recuperer par(extract($_POST);) au controlleur(categorie.php).
 	var actionType = 'action=getCategorie';
 	//La valeur contenant dans txtInput sera recuperée  
-	//...par (extract($_POST);) dans le controlleur.
+	//...par (extract($_POST);) dans le controlleur (categorie.php).
 	var champs  = "txtInput="+txtInput;
 
 	//REQUISITION asynchrone 
@@ -53,7 +53,6 @@ function lister(txtInput)
 		})
 	});
 }
-
 
 //========================================================================
 // Methode qui valide if textbox input is empty.Return true/false.

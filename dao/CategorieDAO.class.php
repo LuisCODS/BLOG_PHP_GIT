@@ -1,10 +1,3 @@
-<!-- 
- ____________________________________________________________________________
-L'objectif de ce module est de réaliser les scripts pour accéder à la base de données.Le DAO donne accès aux données des entités: pour chaque classe il y aura un DAO.
- ____________________________________________________________________________ 
--->
-
-
 <?php
 include'../includes/Connection.class.php';
 
@@ -23,11 +16,11 @@ include'../includes/Connection.class.php';
 		function insert(Categorie $cat)
 		{
 			try {
-					$NomCategorie = $cat->getNomCategorie();
+					$nomCategorie = $cat->getNomCategorie();
 					$sql 		  = 'insert into categorie(NomCategorie) values(?)';
 					$stmt 		  = $this->cn->prepare($sql);
 					
-					$stmt->bindParam(1, $NomCategorie );
+					$stmt->bindParam(1, $nomCategorie );
 					return $stmt->execute();
 			} catch (PDOException $e) {
 				echo 'Erro: '. $e;
@@ -67,15 +60,17 @@ include'../includes/Connection.class.php';
 			}
 		}
 
+		//Get all data from Mysql 
+		//Retur:Convert Data from Mysql to JSON Formate
 		function getCategorie($txtInput)
 		{
-			$sql = "select Categorie_ID, NomCategorie  from categorie WHERE NomCategorie like '%$txtInput%' ";
+			$sql = "select Categorie_ID, NomCategorie from categorie WHERE NomCategorie like '%$txtInput%' ";
 			$stmt = $this->cn->prepare($sql);
 			$stmt->execute();
-			//pega o resutado da consulta
-			$rs = $stmt->fetchall(PDO::FETCH_ASSOC); 
- 			//Retourn un array en json,car HTML(browser) only ready string.
-			 return json_encode($rs);
+			//Retourne un Array d'objet
+			$result = $stmt->fetchall(PDO::FETCH_ASSOC);			
+			 //Convert ARRAY(objet) to JSON(string)	
+			 return json_encode($result);
 		}
 	}
 

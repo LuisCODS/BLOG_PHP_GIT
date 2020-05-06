@@ -26,7 +26,7 @@ $('#txtInput').keyup(()=>
 });
 
 //========================================================================
-// BOUTON (+) : One a window to add a new categorie member.
+// BOUTON (+) : One a window to add a new Profil member.
 //========================================================================
 $('#btnPlus').click(()=>    
 {
@@ -57,7 +57,7 @@ $('#btnAjouter').click(()=>
 
 		//get all form inputs  
 		var champs   = $("#formAjouter").serialize();
-		//Get ID from categorie
+		//Get ID from profil
 		var Categorie_ID = $("#Categorie_ID").val();	
 		//Si le champ est vide, action = insert, sinon action = update
 		var actionType = (Categorie_ID=="") ?'action=insert' : 'action=update';
@@ -89,7 +89,6 @@ $('#btnAjouter').click(()=>
 			});		   
 		});
 	}
-	//else{ console.log(validerEntreeVide()); //to test	}	
 }); 
 
 //========================================================================
@@ -98,7 +97,7 @@ $('#btnAjouter').click(()=>
 //========================================================================
 $('#btnSupprimer').click(()=>    
 {	
-	//get all inputs from form (Categorie_ID et categorieNom )
+	//get all inputs from form (Categorie_ID et NomCategorie )
 	var champs   = $("#formAjouter").serialize();
 	var actionType = 'action=delete';
 

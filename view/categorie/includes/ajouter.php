@@ -1,5 +1,3 @@
-
-
 <!-- _______________  BEGIN INCLUDE MODAL-AJOUTER   _________________-->
 <div class="modal fade ModalCadastro" tabindex="-1" role="dialog" 
      aria-labelledby="myLargeModalLabel" aria-hidden="true" id='ModalCadastro'>
@@ -7,7 +5,7 @@
     <div class="modal-content">  
        <!--  MODAL HEAD -->
         <div class="modal-header">
-            <h5 class="modal-title" id="ModalTitle"></h5>
+            <h5 class="modal-title" id="ModalTitle">Will be change</h5>
                  <!--  X to close modal windows -->
                 <button type="button" 
                         class="close"

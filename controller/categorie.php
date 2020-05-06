@@ -6,7 +6,7 @@
 	include '../model/Categorie.class.php';
 	include '../dao/CategorieDAO.class.php';
 
-	// Get data(action/txtInput) from moduleFunction.js
+	// Get form data(action/txtInput) from moduleFunction.js
 	extract($_POST);
 
 	//GLOBAL
@@ -21,8 +21,8 @@
 		    break;
 
 		case 'update':
-			$Categorie = new Categorie($Categorie_ID, $NomCategorie);		
-			echo $categorieDAO->update($Categorie);//Si ok return 1
+			$categorie = new Categorie($Categorie_ID, $NomCategorie);		
+			echo $categorieDAO->update($categorie);//Si ok return 1
 			break;
 
 		case 'delete':

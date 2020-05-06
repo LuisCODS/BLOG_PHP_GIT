@@ -16,6 +16,7 @@
 	//Recupere la variable obj(tableau json du utilisateur) 
 	//...du callback(moduleScript.js) 
 	extract($_POST);
+	
 	//Decodes a JSON string into a PHP objet
 	foreach( json_decode($obj) as $utilisateur)	
 	{
