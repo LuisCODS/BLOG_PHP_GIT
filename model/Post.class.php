@@ -25,9 +25,6 @@
 		function getPostID(){
 			return $this->Post_ID;
 		}
-		// function setPostID($Post_ID){
-		// 	 $this->Post_ID = $Post_ID;
-		// }
 		function getCategorieID(){
 			return $this->Categorie_ID;
 		}

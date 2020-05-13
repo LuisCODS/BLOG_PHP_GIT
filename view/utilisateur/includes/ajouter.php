@@ -2,7 +2,9 @@
 <div class="modal fade ModalCadastro" tabindex="-1" role="dialog" 
      aria-labelledby="myLargeModalLabel" aria-hidden="true" id='ModalCadastro'>
   <div class="modal-dialog modal-lg" role="document">
+    <!--  MODAL CONTENT -->
     <div class="modal-content">  
+
        <!--  MODAL HEAD -->
         <div class="modal-header">
             <h5 class="modal-title" id="ModalTitle"></h5>
@@ -15,6 +17,7 @@
                         <span aria-hidden="true">&times;</span>
                 </button>
         </div>
+
         <!--  MODAL BODY -->
         <div class="modal-body">
            <form id="formAjouter">
@@ -22,14 +25,14 @@
                 <input type="hidden" id="Utilisateur_ID" name="Utilisateur_ID" readonly="true" >
 
                 <div class="form-group">
-                        <label for=""UtilisateurName>Nom</label>
+                        <label for="">Nom</label>
                         <input type="text" class="form-control estVide" id="UtilisateurName" name="UtilisateurName" onkeypress="isItEmpty(this)" required>
                        <!--  SHOW WHEN INPUT IS EMPTY  -->
                         <div class="invalid-feedback"> Champs obligatoire!</div>
                 </div>
 
                 <div class="form-group">
-                        <label for=""UtilisateurNickName>Utilisateur</label>
+                        <label for="UtilisateurNickName">Utilisateur</label>
                         <input type="text" class="form-control estVide" id="UtilisateurNickName" 
                                name="UtilisateurNickName" onkeypress="isItEmpty(this)" required>
                        <!--  SHOW WHEN INPUT IS EMPTY  -->
@@ -63,6 +66,7 @@
 
             </form>            
         </div>
+
         <!--  MODAL FOOTER -->
         <div class="modal-footer">
             <button class="btn-success"                   
@@ -77,8 +81,11 @@
                     id="btnSupprimer">
                     <i class="far fa-trash-alt"></i> Supprimer
             </button>
-        </div>        
+        </div>  
+    
     </div>
+    <!--  FIN MODAL CONTENT -->
+    
   </div>
 </div>
 <!-- ______________  END INCLUDE MODAL-AJOUTER   ______________-->
