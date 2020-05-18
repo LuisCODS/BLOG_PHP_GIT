@@ -19,7 +19,7 @@ include "../includes/function.php";
 			$this->Title 	    	= $Title;
 			$this->Resume 	   	    = $Resume;
 			$this->Contenu 	 	  	= $Contenu;
-			$this->DateDebut 	  	= $DateDebut;
+			$this->DateDebut 	  	= $DateDebut;			
 			$this->DateFin	  	    = $DateFin;
 		}
 
@@ -51,13 +51,13 @@ include "../includes/function.php";
 			 $this->Contenu = $Contenu;
 		}
 		function getDateDebut(){
-			return format($this->DateDebut);
+			return $this->DateDebut;
 		}
 		function setDateDebut($DateDebut){
 			 $this->DateDebut = $DateDebut;
 		}
 		function getDateFin(){
-			return  format($this->DateFin);
+			return  $this->DateFin;
 		}
 		function setDateFin($DateFin){
 			 $this->DateFin = $DateFin;
