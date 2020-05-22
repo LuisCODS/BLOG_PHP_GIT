@@ -1,5 +1,6 @@
 <?php
 
+include "../includes/function.php";
 	Class Post 
 	{
 
@@ -18,7 +19,7 @@
 			$this->Title 	    	= $Title;
 			$this->Resume 	   	    = $Resume;
 			$this->Contenu 	 	  	= $Contenu;
-			$this->DateDebut 	  	= $DateDebut;
+			$this->DateDebut 	  	= $DateDebut;			
 			$this->DateFin	  	    = $DateFin;
 		}
 
@@ -56,7 +57,7 @@
 			 $this->DateDebut = $DateDebut;
 		}
 		function getDateFin(){
-			return $this->DateFin;
+			return  $this->DateFin;
 		}
 		function setDateFin($DateFin){
 			 $this->DateFin = $DateFin;

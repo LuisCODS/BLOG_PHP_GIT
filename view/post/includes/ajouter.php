@@ -43,14 +43,14 @@
                         <div class="col-md-6">
                             <div class="form-group ">
                                  <label for="DateDebut">Date debut</label>
-                                 <input type="text" class="form-control estVide" id="DateDebut" name="DateDebut" >
+                                 <input  class="form-control estVide " id="DateDebut" name="DateDebut" placeholder="yyyy-mm-dd">
                                  <div class="invalid-feedback">Champs obligatoire!</div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                             <div class="form-group ">
+                             <div class="form-group  ">
                                  <label for="DateFin">Date fin</label>
-                                <input type="text" class="form-control" id="DateFin" name="DateFin" >
+                                <input  class="form-control estVide" id="DateFin" name="DateFin" placeholder="yyyy-mm-dd" >
                              </div> 
                         </div>
                   </div>               

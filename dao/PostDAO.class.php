@@ -91,8 +91,8 @@ include'../includes/Connection.class.php';
 					 Title, 
 					 Resume,
 					 Contenu, 
-					 DateDebut,
-					 DateFin 
+					 date_format(DateDebut, '%d/%m/%Y') asDateDebut,
+					 date_format(DateFin, '%d/%m/%Y') DateFin					  
 					 from post WHERE Title like '%$txtInput%'  
 				     ORDER BY Title ASC";
 					 
