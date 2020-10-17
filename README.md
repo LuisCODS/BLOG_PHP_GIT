@@ -6,7 +6,7 @@ fonction lié à ceux événements, puis un fichier index.php pour rendre la pag
 
 Estrutura de Pastas:
 
-CONTROLLER:recebe as requisicoes 
+CONTROLLER:recebe as requisicoes proviniente da view;
 
 DAO:classes com responsabilidade de acessar os dados no banco de dados;
 
