@@ -6,8 +6,10 @@ fonction lié à ceux événements, puis un fichier index.php pour rendre la pag
 
 Estrutura de Pastas:
 
-controlle:recebe as requisicoes 
+CONTROLLER:recebe as requisicoes 
 
-dao:classes com responsabilidade de acessar os dados no banco de dados;
+DAO:classes com responsabilidade de acessar os dados no banco de dados;
 
-model: onde fica todas as estidades do sistema;
+MODEL: onde fica todas as estidades do sistema;
+
+VIEW: as interfaces disponiveis;
