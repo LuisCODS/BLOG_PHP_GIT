@@ -1,15 +1,17 @@
-# BLOG_PHP_GIT
-Projeto completo em PHP para criar um blog:
-Chaque entité possede un module et chaque module est composé d'un css exclusive, js(avec 2 fichier: un pour l'écoute des événements et l'autre pour les
-fonction lié à ceux événements, puis un fichier index.php pour rendre la page index du module en question.
+Projeto completo em PHP para criar um Locadora de films.
 
+STRUCTURE DES DOSSIERS MVC:
 
-Estrutura de Pastas:
+MODEL: Toutes les entités du système;
 
-CONTROLLER:recebe as requisicoes proviniente da view;
+VIEW: les interfaces avec l'utilisateur
 
-DAO:classes com responsabilidade de acessar os dados no banco de dados;
+CONTROLLER: recebe as dados proviniente de moduleScript.js de chaque module et par la suite decide quel route du CRUD choisir selon le choix de l'utilisateur; Ensuite, il utilise le service fournit par DAO para persistir os dados na BD;
 
-MODEL: onde fica todas as estidades do sistema;
+DAO (Data acce objet): classes responsables de la création du CRUD et de la persistance des données dans la base de données;
 
-VIEW: as interfaces disponiveis;
+LES MODULES: chaque module possede, independament, son css, includes, js et view; js/ : possede 2 arquivos un pour l'écoute des événements (moduleScript.js): recoit les donnes provenant des Forms et envoie au Controlleur et l'autre(moduleFunction.js) pour les fonction lié à ceux événements.
+
+TECNOLOGIA USADA:
+
+-Requisicoes Ajax -API(PDO) para conecxao na base de dados -Bootstrape
