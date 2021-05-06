@@ -12,7 +12,7 @@ Ensuite, il  utilise le service fournit par  DAO pour conserver les données dan
 DAO (Data acce objet): classes responsables de la création du CRUD et de la persistance de données;
 
 LES MODULES: chaque module possède, indépendamment son css, includes, js et view; 
-le js: il dispose de 2 fichiers, un pour l'écoute des événements (moduleScript.js)qui récupérer les données provenant du Forms et  envoie par la suite au Controlleur et l'autre (moduleFunction.js) pour les fonctions  liées à ceux événements.
+Le js,  dispose de 2 fichiers, un pour l'écoute des événements (moduleScript.js)qui récupérer les données provenant du Forms et  envoie par la suite au Controlleur et l'autre (moduleFunction.js) pour les fonctions  liées à ceux événements.
 
 TECHNOLOGIE UTILISÉE:
 
