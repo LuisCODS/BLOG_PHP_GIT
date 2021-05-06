@@ -6,7 +6,8 @@ MODÈLE: Toutes les entités du système;
 
 VUE: les interfaces avec l'utilisateur
 
-CONTROLLER: reçoit les données provenant de moduleScript.js de chaque module et par la suite décide quelle route du CRUD choisir selon le choix de l'utilisateur; Ensuite, utilisez le service fournit pour DAO pour conserver les données dans la base de données;
+CONTROLLER: reçoit les données provenant de moduleScript.js de chaque module et par la suite décide quelle route du CRUD choisir selon le choix de l'utilisateur; 
+Ensuite, il  utilise le service fournit par  DAO pour conserver les données dans la base de données;
 
 DAO (Data acce objet): classes responsables de la création du CRUD et de la persistance de données;
 
